@@ -20,14 +20,24 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 
 2. Descargar el perfil como JSON
 
-3. Renombrar el archivo a "cv.json"
+3. Renombrar el archivo a **cv.json**
 
 4. Añadirlo a la raiz del proyecto
 
-5. Crear un archivo en la raiz llamado "contact.json" con el siguiente contenido:
+5. Crear un archivo en la raiz llamado **contact.json** con el siguiente contenido:
 
 > { "email":"tuemail@dominio.com" }
 
 # Créditos
 
 Basado en el proyecto: https://github.com/midudev/minimalist-portfolio-json/tree/main
+
+# Roadmap
+
+- Añadir comandos para despliegue en firebase
+
+- Añadir opciones de estilo
+
+- Añadir panel de proyectos en el json **projects.json**
+
+- Añadir soportes **Multilenguaje**
