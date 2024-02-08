@@ -1,12 +1,12 @@
 # Intalación
 
-Instalar Node.js
+Instalar [Node.js](https://nodejs.org/en)
 
 Lanzar el comando:
 
 > npm install
 
-Puedes probar con:
+Puedes probar en local con:
 
 > npm run dev
 
