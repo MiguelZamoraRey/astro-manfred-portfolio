@@ -16,7 +16,7 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 
 # Instrucciones
 
-1. Crear un perfil en (Manferd)[https://www.getmanfred.com/]
+1. Crear un perfil en [Manfer](https://www.getmanfred.com/)
 
 2. Descargar el perfil como JSON
 
