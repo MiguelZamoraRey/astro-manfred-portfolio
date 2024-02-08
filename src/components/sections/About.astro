@@ -1,0 +1,13 @@
+---
+import Section from '@/components/Section.astro';
+
+import { aboutMe } from '@cv';
+const { profile } = aboutMe;
+const { description } = profile;
+---
+
+<Section title="Sobre mí">
+  <p>
+    {description}
+  </p>
+</Section>

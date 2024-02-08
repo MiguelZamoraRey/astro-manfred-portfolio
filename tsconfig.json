@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@contact":[
+        "./contact.json"
+      ],
+      "@cv":[
+        "./cv.json"
+      ],
+      "@/*":["src/*"]
+    }
+  }
+}

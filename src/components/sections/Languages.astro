@@ -1,0 +1,61 @@
+---
+import Section from '@/components/Section.astro';
+import { knowledge } from '@cv';
+const { languages } = knowledge;
+---
+
+<Section title="Languages">
+  <ul>
+    {
+      languages.map(({ fullName, level }) => {
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>{fullName}</h3>
+                </div>
+              </header>
+
+              <footer>
+                <p>{level}</p>
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: #111;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: #555;
+    font-size: 0.85rem;
+    min-width: 102px;
+  }
+
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
+  }
+</style>
