@@ -14,7 +14,7 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 
 > npm run build
 
-# Instructions
+# Instrucciones
 
 1. Crear un perfil en Manferd
 
@@ -27,3 +27,7 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 5. Crear un archivo en la raiz llamado "contact.json" con el siguiente contenido:
 
 > { "email":"tuemail@dominio.com" }
+
+# Créditos
+
+Basado en el proyecto: https://github.com/midudev/minimalist-portfolio-json/tree/main
