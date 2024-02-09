@@ -22,4 +22,4 @@ pnpm-debug.log*
 
 # internal
 cv.json
-contact.json
+external.json

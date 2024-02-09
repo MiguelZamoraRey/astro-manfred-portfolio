@@ -22,11 +22,21 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 
 3. Renombrar el archivo a **cv.json**
 
-4. Añadirlo a la raiz del proyecto
+4. Añadirlo a la carpeta **config** del proyecto
 
-5. Crear un archivo en la raiz llamado **contact.json** con el siguiente contenido:
+5. Crear un archivo en la carpeta **config** llamado **external.json** con el siguiente contenido:
 
-> { "email":"tuemail@dominio.com" }
+> {
+> "contact":{
+> "phone":"666 666 666",
+> "email":"tuemail@tudominio.com"
+> },
+> "projects":[]
+> }
+
+_Si no quieres que aparezca ninguno de los dos campos, simplemente ponlos como null_
+
+6. Deja los colores por defecto o modificalos en el **styles.json**
 
 # Créditos
 
@@ -38,6 +48,6 @@ Basado en el proyecto: https://github.com/midudev/minimalist-portfolio-json/tree
 
 - Añadir opciones de estilo
 
-- Añadir panel de proyectos en el json **projects.json**
+- Añadir panel de proyectos en el json **external.json**
 
 - Añadir soportes **Multilenguaje**

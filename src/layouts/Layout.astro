@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { colors } from '@config/styles.json';
+const { bgColor, fontColor } = colors;
 ---
 
 <!doctype html>
@@ -20,7 +23,7 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global>
+<style is:global define:vars={{ bgColor, fontColor }}>
   html {
     font-family:
       Menlo,
@@ -29,7 +32,7 @@ const { title } = Astro.props;
       'Courier New',
       Courier,
       monospace;
-    background: #fff;
+    background: var(--bgColor);
     letter-spacing: -0.02rem;
   }
 
@@ -76,7 +79,7 @@ const { title } = Astro.props;
   }
 
   p {
-    color: #777;
+    color: var(--fontColor);
     font-size: 0.8rem;
     line-height: 1.5;
     margin: 0;

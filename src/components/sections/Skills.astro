@@ -8,7 +8,7 @@ import Node from '@/icons/node.astro';
 import MySQL from '@/icons/sql.astro';
 import Git from '@/icons/git.astro';
 import GitHub from '@/icons/github.astro';
-import { knowledge } from '@cv';
+import { knowledge } from '@config/cv.json';
 const { hardSkills } = knowledge;
 
 const SKILLS_ICONS: Record<string, any> = {
@@ -21,6 +21,9 @@ const SKILLS_ICONS: Record<string, any> = {
   Git,
   GitHub,
 };
+
+import { colors } from '@config/styles.json';
+const { titlesColor, secondaryFontColor } = colors;
 ---
 
 <Section title="Habilidades">
@@ -32,7 +35,7 @@ const SKILLS_ICONS: Record<string, any> = {
 
         return (
           <li>
-            {Icon && <Icon />} <span>{skill.name}</span>
+            {Icon && <Icon color={titlesColor} />} <span>{skill.name}</span>
           </li>
         );
       })

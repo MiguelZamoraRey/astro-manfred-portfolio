@@ -1,10 +1,13 @@
 ---
 import Section from '@/components/Section.astro';
-import { knowledge } from '@cv';
+import { knowledge } from '@config/cv.json';
 const { languages } = knowledge;
+
+import { colors } from '@config/styles.json';
+const { titlesColor, secondaryFontColor } = colors;
 ---
 
-<Section title="Languages">
+<Section title="Idiomas">
   <ul>
     {
       languages.map(({ fullName, level }) => {
@@ -28,7 +31,7 @@ const { languages } = knowledge;
   </ul>
 </Section>
 
-<style>
+<style define:vars={{ titlesColor, secondaryFontColor }}>
   ul {
     display: flex;
     flex-direction: column;
@@ -37,7 +40,7 @@ const { languages } = knowledge;
 
   article h3 {
     font-weight: 500;
-    color: #111;
+    color: var(--titlesColor);
   }
 
   header {
@@ -48,7 +51,7 @@ const { languages } = knowledge;
   }
 
   time {
-    color: #555;
+    color: var(--secondaryFontColor);
     font-size: 0.85rem;
     min-width: 102px;
   }

@@ -7,14 +7,18 @@ import twitter from '@/icons/twitter.astro';
 import other from '@/icons/other.astro';
 import linkedin from '@/icons/linkedin.astro';
 import github from '@/icons/github.astro';
+import Phone from '@/icons/Phone.astro';
 
-import { aboutMe } from '@cv';
-import { email } from '@contact';
+import { aboutMe } from '@config/cv.json';
+import { contact } from '@config/external.json';
 
 const { profile, relevantLinks } = aboutMe;
 const { name, surnames, title, description, avatar, location } = profile;
 const { link, alt } = avatar;
 const { country, region, municipality } = location;
+
+import { colors } from '@config/styles.json';
+const { titlesColor, secondaryFontColor } = colors;
 
 const SOCIAL_ICONS: Record<string, any> = {
   github,
@@ -29,16 +33,30 @@ const SOCIAL_ICONS: Record<string, any> = {
     <div class="info">
       <h1>{name} {surnames}</h1>
       <h2>{title}</h2>
-      <span><WorldMap /> {municipality}, {region}, {country}</span>
+      <span
+        ><WorldMap color={secondaryFontColor} />
+        {municipality}, {region}, {country}</span
+      >
       <footer>
         {
-          email && (
+          contact.email && (
             <a
-              href={`mailto:${email}`}
-              title={`Enviar un correo electrónico a ${name} el correo ${email}`}
+              href={`mailto:${contact.email}`}
+              title={`Enviar un correo electrónico a ${name} el correo ${contact.email}`}
               target="_blank"
             >
-              <Mail />
+              <Mail color={secondaryFontColor} />
+            </a>
+          )
+        }
+        {
+          contact.phone && (
+            <a
+              href={`tel:${contact.phone}`}
+              title={`Contacter con ${name} en el teléfono ${contact.phone}`}
+              target="_blank"
+            >
+              <Phone color={secondaryFontColor} />
             </a>
           )
         }
@@ -53,7 +71,7 @@ const SOCIAL_ICONS: Record<string, any> = {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon />
+                <Icon color={secondaryFontColor} />
               </a>
             );
           })
@@ -66,7 +84,7 @@ const SOCIAL_ICONS: Record<string, any> = {
   </div>
 </Section>
 
-<style>
+<style define:vars={{ titlesColor, secondaryFontColor }}>
   .container {
     display: flex;
     flex-direction: row;
@@ -84,10 +102,11 @@ const SOCIAL_ICONS: Record<string, any> = {
 
   h1 {
     font-size: 2rem;
+    color: var(--titlesColor);
   }
 
   h2 {
-    color: #444;
+    color: var(--titlesColor);
     font-weight: 500;
     font-size: 1.1rem;
     text-wrap: balance;
@@ -101,7 +120,7 @@ const SOCIAL_ICONS: Record<string, any> = {
   }
 
   span {
-    color: #666;
+    color: var(--secondaryFontColor);
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -122,7 +141,7 @@ const SOCIAL_ICONS: Record<string, any> = {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
+    border: 1px solid var(--secondaryFontColor);
     padding: 4px;
     height: 32px;
     width: 32px;

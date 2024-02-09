@@ -3,11 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@contact":[
-        "./contact.json"
-      ],
-      "@cv":[
-        "./cv.json"
+      "@config/*":[
+        "config/*"
       ],
       "@/*":["src/*"]
     }
