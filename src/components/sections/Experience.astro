@@ -23,10 +23,24 @@ const { jobs } = experience;
 
         return (
           <li>
+            <figure>
+              {organization.image && organization.image.link ? (
+                <img src={organization.image.link} alt={organization.name} />
+              ) : (
+                <img src="/images/noPhoto.webp" alt={organization.name} />
+              )}
+            </figure>
             <article>
               <header>
                 <div>
-                  <h3>{organization.name}</h3>
+                  <a
+                    href={organization.URL ? organization.URL : '#'}
+                    title={organization.name}
+                    target="_blank"
+                  >
+                    <h3>{organization.name}</h3>
+                  </a>
+
                   <h4>{roles[0].name}</h4>
                 </div>
                 <time>{years}</time>
@@ -47,6 +61,16 @@ const { jobs } = experience;
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+
+  li {
+    display: flex;
+    width: 100%;
+  }
+
+  figure img {
+    margin-right: 1.5rem;
+    border-radius: 0.2em;
   }
 
   article h3 {
@@ -83,6 +107,14 @@ const { jobs } = experience;
   @media (width <= 700px) {
     time {
       text-align: right;
+    }
+
+    li {
+      flex-direction: column;
+    }
+
+    figure img {
+      margin-top: 0.5rem;
     }
   }
 </style>
