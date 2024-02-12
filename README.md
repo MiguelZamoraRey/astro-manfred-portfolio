@@ -49,7 +49,7 @@ _Si no quieres que aparezca ninguno de los dos campos, simplemente ponlos como n
 
 6. Deja los colores por defecto o modificalos en el **styles.json**
 
-7. Ve a (firebase)[https://firebase.google.com/?hl=es], allí podrás crear un proyecto de tipo hosting, y sigue las instrucciones.
+7. Ve a [firebase](https://firebase.google.com/?hl=es), allí podrás crear un proyecto de tipo hosting, y sigue las instrucciones.
 
 # Créditos
 
