@@ -30,8 +30,7 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 > "contact":{
 > "phone":"666 666 666",
 > "email":"tuemail@tudominio.com"
-> },
-> "projects":[]
+> }
 > }
 
 _Si no quieres que aparezca ninguno de los dos campos, simplemente ponlos como null_
