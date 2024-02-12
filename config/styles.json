@@ -1,12 +1,13 @@
 {
     "colors":{
-        "bgColor":"#000",
+        "bgColor":"#4B1248",
         "fontColor":"#999",
         "titlesColor":"#fff",
         "secondaryFontColor":"#999",
         "heroTitle":"#fff",
         "heroSecondary":"#4B1248",
         "heroFrom":"#F0C27B",
-        "heroTo":"#4B1248"
+        "heroTo":"#4B1248",
+        "secondaryBg":"#000"
     }
 }

@@ -9,25 +9,110 @@ import Skills from '@/components/sections/Skills.astro';
 import Languages from '@/components/sections/Languages.astro';
 import Projects from '@/components/sections/Projects.astro';
 import KeyboardManager from '@/components/KeyboardManager.astro';
+
+import { colors } from '@config/styles.json';
+const { bgColor, secondaryBg } = colors;
+
+import { showSections } from '@config/external.json';
+const { showSkills, showProjects, showEducation, showLanguages } = showSections;
 ---
 
 <Layout title="Portfolio Miguel Zamora Rey - Full Stack developer">
   <main>
     <Hero />
-    <About />
-    <Skills />
+    <div class="secondBg">
+      <About />
+      {showSkills && <Skills />}
+      <br />
+    </div>
+    <section class="spikes"></section>
     <Experience />
-    <Projects />
-    <Education />
-    <Languages />
+    <section class="spikes2"></section>
+    <div class="secondBg">
+      <br />
+      <br />
+      {showProjects && <Projects />}
+      {showEducation && <Education />}
+      {showLanguages && <Languages />}
+      <section class="spikes"></section>
+    </div>
+
+    <footer class="publi">
+      Portfolio desarrollado por <a href="www.mzrdeveloper.com" target="_blank"
+        >Miguel Zamora Rey</a
+      >
+    </footer>
   </main>
   <KeyboardManager />
 </Layout>
 
-<style>
+<style define:vars={{ bgColor, secondaryBg }}>
   main {
     /*padding: 4rem;*/
     margin: auto;
     width: 100%;
+  }
+
+  .secondBg {
+    background-color: var(--secondaryBg);
+  }
+
+  .spikes {
+    position: relative;
+    background: var(--secondaryBg);
+    height: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 50px;
+    background-size: 50px 100%;
+    background-image: linear-gradient(
+        135deg,
+        var(--secondaryBg) 25%,
+        transparent 25%
+      ),
+      linear-gradient(225deg, var(--secondaryBg) 25%, transparent 25%);
+    background-position: 0 0;
+  }
+
+  .spikes2 {
+    position: relative;
+    background: var(--bgColor);
+    height: 2vh;
+  }
+
+  .spikes2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 50px;
+    background-size: 50px 100%;
+    background-image: linear-gradient(
+        135deg,
+        var(--bgColor) 25%,
+        transparent 25%
+      ),
+      linear-gradient(225deg, var(--bgColor) 25%, transparent 25%);
+    background-position: 0 0;
+  }
+
+  .publi {
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+    padding: 0em 4em;
+    height: 6vh;
   }
 </style>
