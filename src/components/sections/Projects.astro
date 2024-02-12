@@ -1,0 +1,113 @@
+---
+import Section from '@/components/Section.astro';
+
+import { experience } from '@config/cv.json';
+
+import { colors } from '@config/styles.json';
+const { titlesColor, secondaryFontColor } = colors;
+
+const { projects } = experience;
+---
+
+<Section title="Proyectos personales">
+  <ul>
+    {
+      projects.map(({ details, type, roles }) => {
+        const startYear = new Date(roles[0].startDate).getFullYear();
+
+        const endYear = roles[0]['finishDate']
+          ? new Date(roles[0]['finishDate']).getFullYear()
+          : 'Actualmente';
+
+        const years = `${startYear} - ${endYear}`;
+
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <a
+                    href={details.URL ? details.URL : '#'}
+                    title={details.name}
+                    target="_blank"
+                  >
+                    <h3>{details.name}</h3>
+                  </a>
+                  <h4>{details.description}</h4>
+                </div>
+                <time>{years}</time>
+              </header>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style define:vars={{ titlesColor, secondaryFontColor }}>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  li {
+    display: flex;
+    width: 100%;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  figure img {
+    margin-right: 1.5rem;
+    border-radius: 0.2em;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: var(--titlesColor);
+  }
+
+  article a {
+    color: var(--titlesColor);
+  }
+
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  article h4 {
+    color: var(--titlesColor);
+    font-weight: 400;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: var(--secondaryFontColor);
+    font-size: 0.85rem;
+    min-width: 102px;
+  }
+
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
+
+    li {
+      flex-direction: column;
+    }
+
+    figure img {
+      margin-top: 0.5rem;
+    }
+  }
+</style>

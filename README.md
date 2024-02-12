@@ -48,6 +48,6 @@ Basado en el proyecto: https://github.com/midudev/minimalist-portfolio-json/tree
 
 - Añadir opciones de estilo
 
-- Añadir panel de proyectos en el json **external.json**
+- ~~Añadir panel de proyectos~~
 
 - Añadir soportes **Multilenguaje**
