@@ -23,3 +23,9 @@ pnpm-debug.log*
 # internal
 cv.json
 external.json
+
+# firebase
+
+.firebaserc
+firebase.json
+.firebase/

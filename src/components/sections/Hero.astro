@@ -18,7 +18,7 @@ const { link, alt } = avatar;
 const { country, region, municipality } = location;
 
 import { colors } from '@config/styles.json';
-const { titlesColor, secondaryFontColor } = colors;
+const { heroTitle, heroSecondary, heroFrom, heroTo } = colors;
 
 const SOCIAL_ICONS: Record<string, any> = {
   github,
@@ -28,69 +28,86 @@ const SOCIAL_ICONS: Record<string, any> = {
 };
 ---
 
-<Section>
-  <div class="container">
-    <div class="info">
-      <h1>{name} {surnames}</h1>
-      <h2>{title}</h2>
-      <span
-        ><WorldMap color={secondaryFontColor} />
-        {municipality}, {region}, {country}</span
-      >
-      <footer>
-        {
-          contact.email && (
-            <a
-              href={`mailto:${contact.email}`}
-              title={`Enviar un correo electrónico a ${name} el correo ${contact.email}`}
-              target="_blank"
-            >
-              <Mail color={secondaryFontColor} />
-            </a>
-          )
-        }
-        {
-          contact.phone && (
-            <a
-              href={`tel:${contact.phone}`}
-              title={`Contacter con ${name} en el teléfono ${contact.phone}`}
-              target="_blank"
-            >
-              <Phone color={secondaryFontColor} />
-            </a>
-          )
-        }
-        {
-          relevantLinks.map(({ type, URL }) => {
-            const Icon = SOCIAL_ICONS[type];
-
-            return (
+<div class="context">
+  <Section>
+    <div class="container">
+      <div class="info">
+        <h1>{name} {surnames}</h1>
+        <h2>{title}</h2>
+        <span
+          ><WorldMap color={heroSecondary} />
+          {municipality}, {region}, {country}</span
+        >
+        <footer>
+          {
+            contact.email && (
               <a
-                href={URL}
-                title={`Visitar el perfil de ${name} en ${type}`}
+                href={`mailto:${contact.email}`}
+                title={`Enviar un correo electrónico a ${name} el correo ${contact.email}`}
                 target="_blank"
-                rel="noopener noreferrer"
               >
-                <Icon color={secondaryFontColor} />
+                <Mail color={heroSecondary} />
               </a>
-            );
-          })
-        }
-      </footer>
-    </div>
-    <figure>
-      <img src={link} alt={name} />
-    </figure>
-  </div>
-</Section>
+            )
+          }
+          {
+            contact.phone && (
+              <a
+                href={`tel:${contact.phone}`}
+                title={`Contacter con ${name} en el teléfono ${contact.phone}`}
+                target="_blank"
+              >
+                <Phone color={heroSecondary} />
+              </a>
+            )
+          }
+          {
+            relevantLinks.map(({ type, URL }) => {
+              const Icon = SOCIAL_ICONS[type];
 
-<style define:vars={{ titlesColor, secondaryFontColor }}>
+              return (
+                <a
+                  href={URL}
+                  title={`Visitar el perfil de ${name} en ${type}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon color={heroSecondary} />
+                </a>
+              );
+            })
+          }
+        </footer>
+      </div>
+      <figure>
+        <img src={link} alt={name} />
+      </figure>
+    </div>
+  </Section>
+</div>
+<div class="area">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+<style define:vars={{ heroTitle, heroSecondary, heroFrom, heroTo }}>
   .container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    z-index: 200;
   }
 
   .info {
@@ -102,11 +119,11 @@ const SOCIAL_ICONS: Record<string, any> = {
 
   h1 {
     font-size: 2rem;
-    color: var(--titlesColor);
+    color: var(--heroTitle);
   }
 
   h2 {
-    color: var(--titlesColor);
+    color: var(--heroTitle);
     font-weight: 500;
     font-size: 1.1rem;
     text-wrap: balance;
@@ -115,12 +132,12 @@ const SOCIAL_ICONS: Record<string, any> = {
   img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    width: 128px;
-    border-radius: 16px;
+    width: 200px;
+    border-radius: 50%;
   }
 
   span {
-    color: var(--secondaryFontColor);
+    color: var(--heroSecondary);
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -141,10 +158,10 @@ const SOCIAL_ICONS: Record<string, any> = {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--secondaryFontColor);
+    border: 1px solid var(--heroSecondary);
     padding: 4px;
-    height: 32px;
-    width: 32px;
+    height: 54px;
+    width: 54px;
     border-radius: 6px;
     transition: all 0.3s ease;
   }
@@ -152,6 +169,142 @@ const SOCIAL_ICONS: Record<string, any> = {
   footer a:hover {
     background: #eee;
     border: 1px solid #ddd;
+  }
+
+  /**CSS BACK */
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .context {
+    width: 100%;
+    position: absolute;
+    top: 18vh;
+    z-index: 2;
+  }
+
+  .area {
+    background: var(--heroFrom); /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      var(--heroFrom),
+      var(--heroTo)
+    ); /* Chrome 10-25, Safari 5.1-6 */
+
+    background: linear-gradient(to right, var(--heroFrom), var(--heroTo));
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
+  }
+
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+  }
+
+  .circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+
+  .circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+
+  .circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+  }
+
+  .circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+
+  .circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+
+  .circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+  }
+
+  .circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+  }
+
+  .circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+
+  .circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+
+  .circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
   }
 
   @media (width <= 700px) {
@@ -178,6 +331,14 @@ const SOCIAL_ICONS: Record<string, any> = {
 
     figure {
       margin: 0 auto;
+    }
+
+    .area {
+      height: 95vh;
+    }
+
+    .circles {
+      height: 95vh;
     }
   }
 </style>

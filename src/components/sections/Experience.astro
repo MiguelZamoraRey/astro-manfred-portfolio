@@ -68,9 +68,13 @@ const { jobs } = experience;
     width: 100%;
   }
 
+  article {
+    width: 100%;
+  }
+
   figure img {
     margin-right: 1.5rem;
-    border-radius: 0.2em;
+    border-radius: 50%;
   }
 
   article h3 {
@@ -112,9 +116,17 @@ const { jobs } = experience;
     li {
       flex-direction: column;
     }
+    figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
 
     figure img {
       margin-top: 0.5rem;
+      width: 25%;
+      border-radius: 50%;
     }
   }
 </style>
