@@ -2,6 +2,7 @@
 import Section from '@/components/Section.astro';
 
 import { experience } from '@config/cv.json';
+import Other from '@/icons/other.astro';
 
 import { colors } from '@config/styles.json';
 const { titlesColor, secondaryFontColor } = colors;
@@ -38,6 +39,9 @@ const { jobs } = experience;
                     title={organization.name}
                     target="_blank"
                   >
+                    <div class="link-svg">
+                      <Other color={titlesColor} />
+                    </div>
                     <h3>{organization.name}</h3>
                   </a>
 
@@ -57,6 +61,9 @@ const { jobs } = experience;
 </Section>
 
 <style define:vars={{ titlesColor, secondaryFontColor }}>
+  .link-svg {
+    margin-right: 0.5em;
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -84,6 +91,7 @@ const { jobs } = experience;
 
   article a {
     color: var(--titlesColor);
+    display: flex;
   }
 
   article a:hover {

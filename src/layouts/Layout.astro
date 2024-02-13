@@ -5,6 +5,11 @@ interface Props {
 
 const { title } = Astro.props;
 
+import { aboutMe, settings } from '@config/cv.json';
+
+const { profile, relevantLinks } = aboutMe;
+const { link } = profile.avatar;
+
 import { colors } from '@config/styles.json';
 const { bgColor, fontColor } = colors;
 ---
@@ -13,10 +18,28 @@ const { bgColor, fontColor } = colors;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={profile.title} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content={bgColor} />
+    <meta name="geo.region" content={settings.language} />
+    <meta name="language" content="es" />
+    <meta name="author" content="Miguel Zamora Rey" />
+    <!--Facebook meta tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content="https://mzrdeveloper.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={profile.title} />
+    <meta property="og:image" content={link} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+
+    <!--Tritter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="https://mzrdeveloper.com" />
+    <meta property="twitter:url" content="https://mzrdeveloper.com/" />
+    <meta name="twitter:image" content={link} />
     <title>{title}</title>
   </head>
   <body>
