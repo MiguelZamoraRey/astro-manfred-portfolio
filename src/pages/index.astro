@@ -13,8 +13,10 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 import { colors } from '@config/styles.json';
 const { bgColor, secondaryBg } = colors;
 
-import { showSections } from '@config/external.json';
-const { showSkills, showProjects, showEducation, showLanguages } = showSections;
+const showSkills = import.meta.env.PUBLIC_SHOWS_KILLS == 'Y';
+const showProjects = import.meta.env.PUBLIC_SHOW_PROJECTS == 'Y';
+const showEducation = import.meta.env.PUBLIC_SHOW_EDUCATION == 'Y';
+const showLanguages = import.meta.env.PUBLIC_SHOW_LANGUAGES == 'Y';
 ---
 
 <Layout title="Portfolio Miguel Zamora Rey - Full Stack developer">

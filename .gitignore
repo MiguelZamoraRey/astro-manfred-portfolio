@@ -20,10 +20,6 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# internal
-cv.json
-external.json
-
 # firebase
 
 .firebaserc

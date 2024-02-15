@@ -28,24 +28,16 @@ Tras crear en firebase un proyecto puedes lanzar el siguiente comando para despl
 
 4. Añadirlo a la carpeta **config** del proyecto
 
-5. Crear un archivo en la carpeta **config** llamado **external.json** con el siguiente contenido:
+5. Crear un archivo **.env** en la raíz del proyecto con el siguiente contenido:
 
 <code>
-{
-    "contact":{
-        "phone":"666 666 666",
-        "email":"tuemail@tudominio.com"
-    },
-    "showSections":{
-        "showSkills": true,
-        "showProjects": true,
-        "showEducation":false,
-        "showLanguages":false
-    }
-}
+PUBLIC_SHOW_SKILLS=Y # Y or N
+PUBLIC_SHOW_PROJECTS=Y # Y or N
+PUBLIC_SHOW_EDUCATION=N # Y or N
+PUBLIC_SHOW_LANGUAGES=N # Y or N
+PUBLIC_EMAIL="" # OPCIONAL Tu email
+PUBLIC_PHONE="" # OPCIONAL Tu teléfono
 </code>
-
-_Si no quieres que aparezca ninguno de los dos campos, simplemente ponlos como null_
 
 6. Deja los colores por defecto o modificalos en el **styles.json**
 

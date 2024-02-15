@@ -10,7 +10,7 @@ import github from '@/icons/github.astro';
 import Phone from '@/icons/Phone.astro';
 
 import { aboutMe } from '@config/cv.json';
-import { contact } from '@config/external.json';
+//import { contact } from '@config/external.json';
 
 const { profile, relevantLinks } = aboutMe;
 const { name, surnames, title, description, avatar, location } = profile;
@@ -19,6 +19,9 @@ const { country, region, municipality } = location;
 
 import { colors } from '@config/styles.json';
 const { heroTitle, heroSecondary, heroFrom, heroTo } = colors;
+
+const email = import.meta.env.PUBLIC_EMAIL;
+const phone = import.meta.env.PUBLIC_PHONE;
 
 const SOCIAL_ICONS: Record<string, any> = {
   github,
@@ -40,10 +43,10 @@ const SOCIAL_ICONS: Record<string, any> = {
         >
         <footer>
           {
-            contact.email && (
+            email && (
               <a
-                href={`mailto:${contact.email}`}
-                title={`Enviar un correo electrónico a ${name} el correo ${contact.email}`}
+                href={`mailto:${email}`}
+                title={`Enviar un correo electrónico a ${name} el correo ${email}`}
                 target="_blank"
               >
                 <Mail color={heroSecondary} />
@@ -51,10 +54,10 @@ const SOCIAL_ICONS: Record<string, any> = {
             )
           }
           {
-            contact.phone && (
+            phone && (
               <a
-                href={`tel:${contact.phone}`}
-                title={`Contacter con ${name} en el teléfono ${contact.phone}`}
+                href={`tel:${phone}`}
+                title={`Contacter con ${name} en el teléfono ${phone}`}
                 target="_blank"
               >
                 <Phone color={heroSecondary} />
