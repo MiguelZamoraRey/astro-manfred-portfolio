@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "astro build && firebase deploy"
+    "deploy": "astro build"
   },
   "dependencies": {
     "astro": "^4.3.5"

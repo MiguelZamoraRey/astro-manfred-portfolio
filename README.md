@@ -14,10 +14,6 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 
 > npm run build
 
-Tras crear en firebase un proyecto puedes lanzar el siguiente comando para desplegar el portfolio
-
-> npm run deploy
-
 # Instrucciones
 
 1. Crear un perfil en [Manfred](https://www.getmanfred.com/)
@@ -41,7 +37,7 @@ PUBLIC_PHONE="" # OPCIONAL Tu teléfono
 
 6. Deja los colores por defecto o modificalos en el **styles.json**
 
-7. Ve a [firebase](https://firebase.google.com/?hl=es), allí podrás crear un proyecto de tipo hosting, y sigue las instrucciones.
+7. SI quieres deplegarlo, te recomiendo hacerte un fork de este proyecto, dejar tu estrellita y hacer deploy con [Netlify](https://www.netlify.com/)
 
 # Créditos
 
@@ -49,7 +45,7 @@ Basado en el proyecto: https://github.com/midudev/minimalist-portfolio-json/tree
 
 # Roadmap
 
-- ~~Añadir comandos para despliegue en firebase~~
+- ~~Añadir comandos para despliegue en netlify~~
 
 - ~~Añadir opciones de estilo y estilos menos minimalistas~~
 
