@@ -18,10 +18,12 @@ const { link, alt } = avatar;
 const { country, region, municipality } = location;
 
 import { colors } from '@config/styles.json';
+import Other from '@/icons/other.astro';
 const { heroTitle, heroSecondary, heroFrom, heroTo } = colors;
 
 const email = import.meta.env.PUBLIC_EMAIL;
 const phone = import.meta.env.PUBLIC_PHONE;
+const manfred = import.meta.env.PUBLIC_MANFRED;
 
 const SOCIAL_ICONS: Record<string, any> = {
   github,
@@ -61,6 +63,17 @@ const SOCIAL_ICONS: Record<string, any> = {
                 target="_blank"
               >
                 <Phone color={heroSecondary} />
+              </a>
+            )
+          }
+          {
+            manfred && (
+              <a
+                href={`${manfred}`}
+                title={`Ver el cv de ${name} en Manfred`}
+                target="_blank"
+              >
+                <Other color={heroSecondary} />
               </a>
             )
           }
