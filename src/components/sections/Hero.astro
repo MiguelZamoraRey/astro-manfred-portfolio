@@ -8,7 +8,9 @@ import other from '@/icons/other.astro';
 import linkedin from '@/icons/linkedin.astro';
 import github from '@/icons/github.astro';
 import Phone from '@/icons/Phone.astro';
+import Download from '@/icons/Download.astro';
 
+import cvPdf from '@config/cv.pdf';
 import { aboutMe } from '@config/cv.json';
 //import { contact } from '@config/external.json';
 
@@ -44,6 +46,20 @@ const SOCIAL_ICONS: Record<string, any> = {
           {municipality}, {region}, {country}</span
         >
         <footer>
+          {
+            (
+              <>
+                <a
+                  class="long-btn"
+                  href={cvPdf}
+                  title={`Descargar el cv de ${name} en pdf`}
+                  target="_blank"
+                >
+                  <Download color={heroSecondary} /> <span>Descargar CV</span>
+                </a>
+              </>
+            )
+          }
           {
             email && (
               <a
@@ -185,6 +201,14 @@ const SOCIAL_ICONS: Record<string, any> = {
   footer a:hover {
     background: #eee;
     border: 1px solid #ddd;
+  }
+
+  .long-btn {
+    width: 13em !important;
+  }
+
+  .long-btn span {
+    display: block;
   }
 
   /**CSS BACK */
@@ -355,6 +379,14 @@ const SOCIAL_ICONS: Record<string, any> = {
 
     .circles {
       height: 95vh;
+    }
+
+    .long-btn {
+      width: 5em !important;
+    }
+
+    .long-btn span {
+      display: none;
     }
   }
 </style>
