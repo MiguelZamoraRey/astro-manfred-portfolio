@@ -24,7 +24,9 @@ Puedes construir una build con el comando, los resultados aparecerán en la carp
 
 4. Añadirlo a la carpeta **config** del proyecto
 
-5. Crear un archivo **.env** en la raíz del proyecto con el siguiente contenido:
+5. Añade tu curriculum en pdf a la carpeta **config**, su nombre debe ser **cv.pdf**
+
+6. Crear un archivo **.env** en la raíz del proyecto con el siguiente contenido:
 
 <code>
 PUBLIC_SHOW_SKILLS=Y # Y or N
@@ -37,7 +39,7 @@ PUBLIC_PHONE="" # OPCIONAL Tu teléfono
 
 6. Deja los colores por defecto o modificalos en el **styles.json**
 
-7. SI quieres deplegarlo, te recomiendo hacerte un fork de este proyecto, dejar tu estrellita y hacer deploy con [Netlify](https://www.netlify.com/)
+7. Si quieres deplegarlo, te recomiendo hacerte un fork de este proyecto, dejar tu estrellita y hacer deploy con [Netlify](https://www.netlify.com/)
 
 # Créditos
 
@@ -51,4 +53,6 @@ Basado en el proyecto: https://github.com/midudev/minimalist-portfolio-json/tree
 
 - ~~Añadir panel de proyectos~~
 
-- Añadir soportes **Multilenguaje**
+- ~~Añadir cv descargable~~
+
+- Añadir soporte **Multilenguaje**
