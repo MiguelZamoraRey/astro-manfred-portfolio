@@ -1,4 +1,4 @@
-# Intalación
+# Instalación
 
 Instalar [Node.js](https://nodejs.org/en)
 
