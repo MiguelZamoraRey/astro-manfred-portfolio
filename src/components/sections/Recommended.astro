@@ -1,0 +1,133 @@
+---
+import Section from '@/components/Section.astro';
+
+import { experience } from '@config/cv.json';
+import Other from '@/icons/other.astro';
+
+import { colors } from '@config/styles.json';
+const { titlesColor, secondaryFontColor } = colors;
+
+import { recomendations } from '@config/recommended.json';
+---
+
+<Section title="Recomendaciones">
+  <ul>
+    {
+      recomendations.map(
+        ({ firstName, lastName, img, company, jobTitle, text, createdAt }) => {
+          return (
+            <li>
+              <figure>
+                {img && img ? (
+                  <img src={img} alt={firstName + ' ' + lastName} />
+                ) : (
+                  <img
+                    src="/images/noPhoto.webp"
+                    alt={firstName + ' ' + lastName}
+                  />
+                )}
+              </figure>
+              <article>
+                <header>
+                  <div>
+                    <h3>{firstName + ' ' + lastName}</h3>
+
+                    <h4>{company + ' - ' + jobTitle}</h4>
+                  </div>
+                  <time>{createdAt}</time>
+                </header>
+                <footer>
+                  <p>"{text}"</p>
+                </footer>
+              </article>
+            </li>
+          );
+        }
+      )
+    }
+  </ul>
+</Section>
+
+<style define:vars={{ titlesColor, secondaryFontColor }}>
+  .link-svg {
+    margin-right: 0.5em;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  li {
+    display: flex;
+    width: 100%;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  figure img {
+    margin-right: 1.5rem;
+    border-radius: 50%;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: var(--titlesColor);
+  }
+
+  article a {
+    color: var(--titlesColor);
+    display: flex;
+  }
+
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  article h4 {
+    color: var(--secondaryFontColor);
+    font-weight: 400;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: var(--secondaryFontColor);
+    font-size: 0.85rem;
+    min-width: 102px;
+  }
+
+  footer p {
+    font-style: italic;
+    color: var(--titlesColor);
+  }
+
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
+
+    li {
+      flex-direction: column;
+    }
+    figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    figure img {
+      margin-top: 0.5rem;
+      width: 25%;
+      border-radius: 50%;
+    }
+  }
+</style>
