@@ -28,8 +28,8 @@ const showRecommended = import.meta.env.PUBLIC_SHOW_RECOMMENDED == 'Y';
     <Hero />
     <div class="secondBg">
       <About />
-      {showRecommended && recomendations && <Recommended />}
       {showSkills && <Skills />}
+      {showRecommended && recomendations && <Recommended />}
       <br />
     </div>
     <section class="spikes"></section>

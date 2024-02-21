@@ -1,826 +1,778 @@
 {
-    "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.5/schema/schema.json",
-    "settings": {
-      "language": "ES",
-      "MACVersion": "0.5"
-    },
-    "aboutMe": {
-      "profile": {
-        "name": "Miguel",
-        "surnames": "Zamora Rey",
-        "title": "Senior Javascript fullstack web & mobile developer (Javascript, Node.js, React, espress, AWS, GCP, Astro). Experimenting with Godot engine. FULL-REMOTE.",
-        "description": "He trabajado desde 2015 como programador y desarrollador, tras unos años trabajando para diferentes consultorías y otros como freelance, he centrado mi carrera en tecnologías Javascript. Me apasionan las nuevas tecnologías y siempre estoy dispuesto a seguir aprendiendo.\n\nActualmente mi stack esta basado en javascript con tecnologías como Node.js, Express o Fastify y a nivel de Frontend con frameworks como React, Astro, o Vue así como con bases de datos relacionales (MySql, Oracle) y no relacionales (MongoDB, DynamoDb, Firebase).\n\nA nivel de desarrollo móvil he trabajado con frameworks como React Native (con y sin Expo).\n\nComo plataforma he trabajado con Docker, pero sobretodo en el mundo serverless de Google cloud platform o AWS.\n\nTambien trabajo con Godot engine realizando GameJams y proyectos orientados al mundo de los videojuegos.",
-        "avatar": {
-          "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771",
-          "alt": "24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771"
-        },
-        "location": {
-          "notes": "Autocompleted using Google Maps API (id: ChIJO_V_mGOsQw0RLkkHLC5wCoA)",
-          "country": "España",
-          "region": "Castilla-La Mancha",
-          "municipality": "Guadalajara"
-        }
+  "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.5/schema/schema.json",
+  "settings": {
+    "language": "ES",
+    "MACVersion": "0.5"
+  },
+  "aboutMe": {
+    "profile": {
+      "name": "Miguel",
+      "surnames": "Zamora Rey",
+      "title": "Full stack senior Javascript developer",
+      "description": "He trabajado desde 2015 como programador y desarrollador, tras unos años trabajando para diferentes consultorías y otros como freelance, he centrado mi carrera en tecnologías Javascript. Me apasionan las nuevas tecnologías y siempre estoy dispuesto a seguir aprendiendo.\n\nActualmente mi stack esta basado en javascript con tecnologías como Node.js, Express o Fastify y a nivel de Frontend con frameworks como React, Astro, o Vue así como con bases de datos relacionales (MySql, Oracle) y no relacionales (MongoDB, DynamoDb, Firebase).\n\nA nivel de desarrollo móvil he trabajado con frameworks como React Native (con y sin Expo).\n\nComo plataforma he trabajado con Docker, pero sobretodo en el mundo serverless de Google cloud platform o AWS.\n\nTambien trabajo con Godot engine realizando GameJams y proyectos orientados al mundo de los videojuegos.",
+      "avatar": {
+        "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771",
+        "alt": "24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771"
       },
-      "relevantLinks": [
-        {
-          "type": "linkedin",
-          "URL": "https://linkedin.com/in/miguelzamorarey"
-        },
-        {
-          "type": "github",
-          "URL": "https://github.com/MiguelZamoraRey"
-        },
-        {
-          "type": "other",
-          "URL": "https://www.mzrdeveloper.com/"
-        }
-      ]
+      "location": {
+        "notes": "Autocompleted using Google Maps API (id: ChIJO_V_mGOsQw0RLkkHLC5wCoA)",
+        "country": "España",
+        "region": "Castilla-La Mancha",
+        "municipality": "Guadalajara"
+      }
     },
-    "experience": {
-      "jobs": [
-        {
-          "organization": {
-            "name": "QUANTIC BRAINS",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://www.quanticbrains.com/"
+    "relevantLinks": [
+      {
+        "type": "linkedin",
+        "URL": "https://linkedin.com/in/miguelzamorarey"
+      },
+      {
+        "type": "github",
+        "URL": "https://github.com/MiguelZamoraRey"
+      },
+      {
+        "type": "other",
+        "URL": "https://www.mzrdeveloper.com/"
+      }
+    ]
+  },
+  "experience": {
+    "jobs": [
+      {
+        "organization": {
+          "name": "QUANTIC BRAINS",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771"
           },
-          "roles": [
-            {
-              "name": "Programador full stack",
-              "startDate": "2023-02-01",
-              "challenges": [
-                {
-                  "description": "Desde Febrero trabajo como parte del equipo de software de quanticbrains, una empresa de IA, construyendo infraestructura, backend e interfaces para poder acercar los productos de la empresa a los clientes finales."
-                }
-              ],
-              "competences": [
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "Google Cloud",
-                  "type": "technology"
-                },
-                {
-                  "name": "Google Cloud Firestore",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                },
-                {
-                  "name": "NodeJS",
-                  "type": "technology"
-                },
-                {
-                  "name": "React",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
+          "URL": "https://www.quanticbrains.com/"
         },
-        {
-          "organization": {
-            "name": "Culpass - Experiencias culturales únicas",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/49c99328-f385-4a95-82c9-55c2d4346ad7_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/49c99328-f385-4a95-82c9-55c2d4346ad7_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://culpass.com/"
-          },
-          "roles": [
-            {
-              "name": "Programador full stack y responsable de tecnología",
-              "startDate": "2022-01-01",
-              "finishDate": "2022-11-30",
-              "challenges": [
-                {
-                  "description": "Entre enero y diciembre de 2022 colaboré con esta startup destinada a la creación de un marketplace basado en eventos culturales únicos. Participé como responsable tecnológico, gestion de equipo y responsable de backend."
-                }
-              ],
-              "competences": [
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                },
-                {
-                  "name": "MongoDB",
-                  "type": "technology"
-                },
-                {
-                  "name": "NodeJS",
-                  "type": "technology"
-                },
-                {
-                  "name": "React",
-                  "type": "technology"
-                },
-                {
-                  "name": "React Native",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "mzrdeveloper"
-          },
-          "roles": [
-            {
-              "name": "Web & mobile freelance developer",
-              "startDate": "2020-12-01",
-              "finishDate": "2023-02-28",
-              "challenges": [
-                {
-                  "description": "Desktop, mobile and web development.\nReact, React Native, Fastify, AWS, NodeJS."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "niikiis",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/c34aadc7-aeea-49dc-b3f5-b8c20945e385_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/c34aadc7-aeea-49dc-b3f5-b8c20945e385_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://www.niikiis.com/"
-          },
-          "roles": [
-            {
-              "name": "Desarrollador de back-end",
-              "startDate": "2020-08-01",
-              "finishDate": "2023-02-28",
-              "challenges": [
-                {
-                  "description": "Desde agosto colaboro con niikiis como desarrollador de backend y responsable de varios de los módulos de la aplicación, así como diseñando nuevas soluciones técnicas. \n\nEl reto más destacado en esta empresa fué diseñar e implementar un sistema basado en colas para gestionar todos los eventos de negocio de la empresa."
-                }
-              ],
-              "competences": [
-                {
-                  "name": "AWS",
-                  "type": "technology"
-                },
-                {
-                  "name": "AWS SNS",
-                  "type": "technology"
-                },
-                {
-                  "name": "Amazon SQS",
-                  "type": "technology"
-                },
-                {
-                  "name": "DynamoDB",
-                  "type": "technology"
-                },
-                {
-                  "name": "MongoDB",
-                  "type": "technology"
-                },
-                {
-                  "name": "NodeJS",
-                  "type": "technology"
-                },
-                {
-                  "name": "React",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "VAILOS",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/a3e93ba4-5b20-4ff8-a5e0-c622f89c73cf_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/a3e93ba4-5b20-4ff8-a5e0-c622f89c73cf_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://vailos.com/"
-          },
-          "roles": [
-            {
-              "name": "Desarrollador de software",
-              "startDate": "2019-10-01",
-              "finishDate": "2020-11-30",
-              "challenges": [
-                {
-                  "description": "Entro a formar parte del equipo en evolutivos y nuevos proyectos para importantes clientes del sector editorial. Trabajando, sobre todo, en la creación de las interfaces internas que usarían los clientes, esto me supuso un reto a la hora de empezar a pensar en el UX y agilizar el proceso de aprendizaje que sufren muchos usuarios acostumbrados a interfaces de hace casi diez años."
-                }
-              ],
-              "competences": [
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                },
-                {
-                  "name": "JAVA",
-                  "type": "technology"
-                },
-                {
-                  "name": "React",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "NEORIS",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/8d596927-ec64-4a63-afdb-4e3449e95fdb_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/8d596927-ec64-4a63-afdb-4e3449e95fdb_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://neoris.com/"
-          },
-          "roles": [
-            {
-              "name": "Programador informático",
-              "startDate": "2018-09-01",
-              "finishDate": "2019-10-31",
-              "challenges": [
-                {
-                  "description": "Programador en cliente del sector banca, encargado de mantenimiento y evolutivos de varias piezas de software."
-                }
-              ],
-              "competences": [
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                },
-                {
-                  "name": "JAVA",
-                  "type": "technology"
-                },
-                {
-                  "name": "JavaScript",
-                  "type": "technology"
-                },
-                {
-                  "name": "React",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "AgioGlobal Working Together",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/54496703-95f6-440b-bb3e-b6875056122e_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/54496703-95f6-440b-bb3e-b6875056122e_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://www.agioglobal.com/"
-          },
-          "roles": [
-            {
-              "name": "Programador",
-              "startDate": "2018-07-01",
-              "finishDate": "2018-09-30",
-              "challenges": [
-                {
-                  "description": "Programando soluciones para el departamento de Marco Digitalización y manteniendo aplicaciones propias del banco."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "Amaris",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/304fd302-2a0b-4d0c-8619-d011eede8766_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/304fd302-2a0b-4d0c-8619-d011eede8766_linkedin-photo-53771.linkedin-photo-53771"
-            },
-            "URL": "https://amaris.com/"
-          },
-          "roles": [
-            {
-              "name": "Consultor",
-              "startDate": "2017-05-01",
-              "finishDate": "2018-07-31",
-              "challenges": [
-                {
-                  "description": "Esta es una de las experiencias más enriquecedoras de mis inicios, empecé trabajando para un importante cliente del sector seguros apoyando en el desarrollo de su interfaz para clientes con backend en JAVA y Vaadin en el frontend, y al finalizar el proyecto satisfactoriamente me dieron la oportunidad de ayudar en un proyecto desde cero con un tempranísimo React en Barcelona para un cliente del sector Farma, creando toda la plataforma para la gestión diaria de su trabajo. Fué el momento de mi cambio de stack a nivel profesional."
-                }
-              ],
-              "competences": [
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                },
-                {
-                  "name": "Hibernate",
-                  "type": "technology"
-                },
-                {
-                  "name": "JAVA",
-                  "type": "technology"
-                },
-                {
-                  "name": "JavaScript",
-                  "type": "technology"
-                },
-                {
-                  "name": "NodeJS",
-                  "type": "technology"
-                },
-                {
-                  "name": "React",
-                  "type": "technology"
-                },
-                {
-                  "name": "Spring",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "Tragsatec",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/78992f6c-3213-4ca5-b2d3-3c0e0932f043_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/78992f6c-3213-4ca5-b2d3-3c0e0932f043_linkedin-photo-53771.linkedin-photo-53771"
-            }
-          },
-          "roles": [
-            {
-              "name": "Programador",
-              "startDate": "2016-11-01",
-              "finishDate": "2017-05-31",
-              "challenges": [
-                {
-                  "description": "Puesto como programador Java, manteniendo aplicativos y migrando las interfaces a frameworks más modernos."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "STRATESYS",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/695b0e10-a2f1-42fc-9395-1a4a77e7d236_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/695b0e10-a2f1-42fc-9395-1a4a77e7d236_linkedin-photo-53771.linkedin-photo-53771"
-            }
-          },
-          "roles": [
-            {
-              "name": "Programador",
-              "startDate": "2015-11-01",
-              "finishDate": "2016-11-30",
-              "challenges": [
-                {
-                  "description": "Entre a formar parte de la plantilla de Stratesys en un equipo de desarrollo fuera de SAP, para desarrollar todos aquellos aplicativos a los que no se pudiese llegar con el ERP o requiriesen más personalización. En esta etapa toque muchísimas tencnologías y descubrí NodeJS."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "Computer Space",
-            "image": {
-              "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/f7896224-6a95-441f-a97f-9a0d0c96f160_linkedin-photo-53771.linkedin-photo-53771",
-              "alt": "24/02/08/f7896224-6a95-441f-a97f-9a0d0c96f160_linkedin-photo-53771.linkedin-photo-53771"
-            }
-          },
-          "roles": [
-            {
-              "name": "Estudiante en practicas",
-              "startDate": "2014-09-01",
-              "finishDate": "2014-11-30",
-              "challenges": [
-                {
-                  "description": "Prácticas en empresa desde septiembre de 2014 hasta noviembre de 2014 en Computer Space (www.ComputerSpace.es), especializada en brokerage, venta y mantenimiento de equipos informáticos. Realizando servicios a través de esta empresa para el Colegio de Huérfanos de la Armada, y el Centro de Logística de la misma."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "Padis"
-          },
-          "roles": [
-            {
-              "name": "Encargado",
-              "startDate": "2008-02-01",
-              "finishDate": "2015-02-28",
-              "challenges": [
-                {
-                  "description": "Desde el año 2008 hasta septiembre de 2014 trabajé en PADIS (www.padisl5r.com), un comercio de juegos de mesa y entretenimiento. Hasta el año 2010 trabajé en ferias comerciales como empleado del stand, desde ese año trabajé como encargado del turno del fin de semana en atención al cliente (cara al público), gestión de pedidos vía internet, gestión de la base de datos y organización de varios eventos."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "organization": {
-            "name": "Despacho Procurador Don Miguel Zamora Bausa"
-          },
-          "roles": [
-            {
-              "name": "Apoyo administrativo",
-              "startDate": "2006-04-01",
-              "finishDate": "2008-01-31",
-              "challenges": [
-                {
-                  "description": "Servicios ocasionales (entre el año 2006 y el 2008) en despacho del procurador de los tribunales Don Miguel Zamora Bausá, digitalización de expedientes, presentación de escritos, y gestiones en los juzgados."
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "projects": [
-        {
-          "details": {
-            "name": "Creador de portfolios usando el JSON de Manfred",
-            "description": "Estoy desarrollando un proyecto para poder crear a base del JSON exportable de Manfred un portfolio web completo y personalizable.",
-            "URL": "https://github.com/MiguelZamoraRey/portfolio_2024_v1"
-          },
-          "type": "openSource",
-          "roles": [
-            {
-              "name": "Developer",
-              "startDate": "2024-02-01",
-              "competences": [
-                {
-                  "name": "Astro",
-                  "type": "technology"
-                },
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                },
-                {
-                  "name": "JavaScript",
-                  "type": "technology"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "details": {
-            "name": "Pagina oficial de la liga de blood bowl de Guadalajara",
-            "description": "Este es un proyecto personal utilizando un framework nuevo, como es Astro, tratando de evitar en todo momento usar JS, y acercarme a lo mas vanilla posible.",
-            "URL": "https://guadabowl.com/"
-          },
-          "type": "sideProject",
-          "roles": [
-            {
-              "name": "Developer",
-              "startDate": "2024-01-01",
-              "competences": [
-                {
-                  "name": "Astro",
-                  "type": "technology"
-                },
-                {
-                  "name": "CSS",
-                  "type": "technology"
-                },
-                {
-                  "name": "HTML",
-                  "type": "technology"
-                }
-              ],
-              "finishDate": "2024-02-01"
-            }
-          ]
-        }
-      ]
-    },
-    "knowledge": {
-      "languages": [
-        {
-          "name": "EN",
-          "fullName": "Inglés",
-          "level": "Limited working proficiency"
-        },
-        {
-          "name": "ES",
-          "fullName": "Español",
-          "level": "Native or bilingual proficiency"
-        }
-      ],
-      "hardSkills": [
-        {
-          "skill": {
-            "name": "AWS",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Android SDK",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Astro",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "CSS",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Express",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Fastify",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Git",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Gitflow",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Github",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Godot",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Google Cloud",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Google Cloud Firestore",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Google Firebase",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "HTML",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "JavaScript",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "MongoDB",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "Mongoose",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "MySQL",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "NodeJS",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "React",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "React Native",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "SQL",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "TypeScript",
-            "type": "technology"
-          }
-        },
-        {
-          "skill": {
-            "name": "jQuery",
-            "type": "technology"
-          }
-        }
-      ],
-      "studies": [
-        {
-          "studyType": "officialDegree",
-          "degreeAchieved": true,
-          "name": "Certificado Profesional Desarrollo de aplicaciones Web, Programación informática, aplicaciones específicas",
-          "startDate": "2015-01-01",
-          "institution": {
-            "name": "Forinemas"
-          },
-          "finishDate": "2015-01-01"
-        },
-        {
-          "studyType": "officialDegree",
-          "degreeAchieved": true,
-          "name": "Tecnico superior en desarrollo de aplicaciones multiplataforma, Programación informática",
-          "startDate": "2013-01-01",
-          "institution": {
-            "name": "Centro Cultural Salmantino"
-          },
-          "finishDate": "2014-01-01"
-        }
-      ],
-      "softSkills": [
-        {
-          "skill": {
-            "name": "Aprendizaje Continuo",
-            "type": "practice"
-          }
-        },
-        {
-          "skill": {
-            "name": "Pensamiento creativo",
-            "type": "practice"
-          }
-        },
-        {
-          "skill": {
-            "name": "Proactividad",
-            "type": "practice"
-          }
-        }
-      ]
-    },
-    "careerPreferences": {
-      "contact": {
-        "publicProfiles": [
+        "roles": [
           {
-            "URL": "https://linkedin.com/in/miguelzamorarey",
-            "type": "linkedin"
-          },
-          {
-            "URL": "https://github.com/MiguelZamoraRey",
-            "type": "github"
+            "name": "Programador full stack",
+            "startDate": "2023-02-01",
+            "challenges": [
+              {
+                "description": "Desde Febrero trabajo como parte del equipo de software de quanticbrains, una empresa de IA, construyendo infraestructura, backend e interfaces para poder acercar los productos de la empresa a los clientes finales."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "Google Cloud",
+                "type": "technology"
+              },
+              {
+                "name": "Google Cloud Firestore",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              }
+            ]
           }
-        ],
-        "contactMails": [
-          "miguelzamorarey@gmail.com"
         ]
       },
-      "preferences": {
-        "preferredCompetences": [
-          {
-            "name": "AWS",
-            "type": "technology"
+      {
+        "organization": {
+          "name": "Culpass - Experiencias culturales únicas",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/49c99328-f385-4a95-82c9-55c2d4346ad7_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/49c99328-f385-4a95-82c9-55c2d4346ad7_linkedin-photo-53771.linkedin-photo-53771"
           },
+          "URL": "https://culpass.com/"
+        },
+        "roles": [
           {
-            "name": "Astro",
-            "type": "technology"
-          },
-          {
-            "name": "CSS",
-            "type": "technology"
-          },
-          {
-            "name": "Express",
-            "type": "technology"
-          },
-          {
-            "name": "Godot",
-            "type": "technology"
-          },
-          {
-            "name": "Google Cloud",
-            "type": "technology"
-          },
-          {
-            "name": "HTML",
-            "type": "technology"
-          },
-          {
-            "name": "MQTT",
-            "type": "technology"
-          },
-          {
-            "name": "MongoDB",
-            "type": "technology"
-          },
-          {
-            "name": "NodeJS",
-            "type": "technology"
-          },
-          {
-            "name": "RabbitMQ",
-            "type": "technology"
-          },
-          {
-            "name": "React",
-            "type": "technology"
+            "name": "Programador full stack y responsable de tecnología",
+            "startDate": "2022-01-01",
+            "finishDate": "2022-11-30",
+            "challenges": [
+              {
+                "description": "Entre enero y diciembre de 2022 colaboré con esta startup destinada a la creación de un marketplace basado en eventos culturales únicos. Participé como responsable tecnológico, gestion de equipo y responsable de backend."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "MongoDB",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              },
+              {
+                "name": "React Native",
+                "type": "technology"
+              }
+            ]
           }
-        ],
-        "discardedCompetences": [
-          {
-            "name": "Hibernate",
-            "type": "technology"
-          },
-          {
-            "name": "JAVA",
-            "type": "technology"
-          },
-          {
-            "name": "Spring",
-            "type": "technology"
-          }
-        ],
-        "preferredRoles": [
-          "Backend Developer",
-          "Frontend Developer",
-          "Full-stack Developer"
         ]
       },
-      "status": "searchingActively"
+      {
+        "organization": {
+          "name": "mzrdeveloper"
+        },
+        "roles": [
+          {
+            "name": "Web & mobile freelance developer",
+            "startDate": "2020-12-01",
+            "finishDate": "2023-02-28",
+            "challenges": [
+              {
+                "description": "Desktop, mobile and web development.\nReact, React Native, Fastify, AWS, NodeJS."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "niikiis",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/c34aadc7-aeea-49dc-b3f5-b8c20945e385_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/c34aadc7-aeea-49dc-b3f5-b8c20945e385_linkedin-photo-53771.linkedin-photo-53771"
+          },
+          "URL": "https://www.niikiis.com/"
+        },
+        "roles": [
+          {
+            "name": "Desarrollador de back-end",
+            "startDate": "2020-08-01",
+            "finishDate": "2023-02-28",
+            "challenges": [
+              {
+                "description": "Desde agosto colaboro con niikiis como desarrollador de backend y responsable de varios de los módulos de la aplicación, así como diseñando nuevas soluciones técnicas. \n\nEl reto más destacado en esta empresa fué diseñar e implementar un sistema basado en colas para gestionar todos los eventos de negocio de la empresa."
+              }
+            ],
+            "competences": [
+              {
+                "name": "AWS",
+                "type": "technology"
+              },
+              {
+                "name": "AWS SNS",
+                "type": "technology"
+              },
+              {
+                "name": "Amazon SQS",
+                "type": "technology"
+              },
+              {
+                "name": "DynamoDB",
+                "type": "technology"
+              },
+              {
+                "name": "MongoDB",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "VAILOS",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/a3e93ba4-5b20-4ff8-a5e0-c622f89c73cf_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/a3e93ba4-5b20-4ff8-a5e0-c622f89c73cf_linkedin-photo-53771.linkedin-photo-53771"
+          },
+          "URL": "https://vailos.com/"
+        },
+        "roles": [
+          {
+            "name": "Desarrollador de software",
+            "startDate": "2019-10-01",
+            "finishDate": "2020-11-30",
+            "challenges": [
+              {
+                "description": "Entro a formar parte del equipo en evolutivos y nuevos proyectos para importantes clientes del sector editorial. Trabajando, sobre todo, en la creación de las interfaces internas que usarían los clientes, esto me supuso un reto a la hora de empezar a pensar en el UX y agilizar el proceso de aprendizaje que sufren muchos usuarios acostumbrados a interfaces de hace casi diez años."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JAVA",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "NEORIS",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/8d596927-ec64-4a63-afdb-4e3449e95fdb_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/8d596927-ec64-4a63-afdb-4e3449e95fdb_linkedin-photo-53771.linkedin-photo-53771"
+          },
+          "URL": "https://neoris.com/"
+        },
+        "roles": [
+          {
+            "name": "Programador informático",
+            "startDate": "2018-09-01",
+            "finishDate": "2019-10-31",
+            "challenges": [
+              {
+                "description": "Programador en cliente del sector banca, encargado de mantenimiento y evolutivos de varias piezas de software."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JAVA",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "AgioGlobal Working Together",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/54496703-95f6-440b-bb3e-b6875056122e_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/54496703-95f6-440b-bb3e-b6875056122e_linkedin-photo-53771.linkedin-photo-53771"
+          },
+          "URL": "https://www.agioglobal.com/"
+        },
+        "roles": [
+          {
+            "name": "Programador",
+            "startDate": "2018-07-01",
+            "finishDate": "2018-09-30",
+            "challenges": [
+              {
+                "description": "Programando soluciones para el departamento de Marco Digitalización y manteniendo aplicaciones propias del banco."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Amaris",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/304fd302-2a0b-4d0c-8619-d011eede8766_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/304fd302-2a0b-4d0c-8619-d011eede8766_linkedin-photo-53771.linkedin-photo-53771"
+          },
+          "URL": "https://amaris.com/"
+        },
+        "roles": [
+          {
+            "name": "Consultor",
+            "startDate": "2017-05-01",
+            "finishDate": "2018-07-31",
+            "challenges": [
+              {
+                "description": "Esta es una de las experiencias más enriquecedoras de mis inicios, empecé trabajando para un importante cliente del sector seguros apoyando en el desarrollo de su interfaz para clientes con backend en JAVA y Vaadin en el frontend, y al finalizar el proyecto satisfactoriamente me dieron la oportunidad de ayudar en un proyecto desde cero con un tempranísimo React en Barcelona para un cliente del sector Farma, creando toda la plataforma para la gestión diaria de su trabajo. Fué el momento de mi cambio de stack a nivel profesional."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "Hibernate",
+                "type": "technology"
+              },
+              {
+                "name": "JAVA",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              },
+              {
+                "name": "Spring",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Tragsatec",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/78992f6c-3213-4ca5-b2d3-3c0e0932f043_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/78992f6c-3213-4ca5-b2d3-3c0e0932f043_linkedin-photo-53771.linkedin-photo-53771"
+          }
+        },
+        "roles": [
+          {
+            "name": "Programador",
+            "startDate": "2016-11-01",
+            "finishDate": "2017-05-31",
+            "challenges": [
+              {
+                "description": "Puesto como programador Java, manteniendo aplicativos y migrando las interfaces a frameworks más modernos."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "STRATESYS",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/695b0e10-a2f1-42fc-9395-1a4a77e7d236_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/695b0e10-a2f1-42fc-9395-1a4a77e7d236_linkedin-photo-53771.linkedin-photo-53771"
+          }
+        },
+        "roles": [
+          {
+            "name": "Programador",
+            "startDate": "2015-11-01",
+            "finishDate": "2016-11-30",
+            "challenges": [
+              {
+                "description": "Entre a formar parte de la plantilla de Stratesys en un equipo de desarrollo fuera de SAP, para desarrollar todos aquellos aplicativos a los que no se pudiese llegar con el ERP o requiriesen más personalización. En esta etapa toque muchísimas tencnologías y descubrí NodeJS."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Computer Space",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/f7896224-6a95-441f-a97f-9a0d0c96f160_linkedin-photo-53771.linkedin-photo-53771",
+            "alt": "24/02/08/f7896224-6a95-441f-a97f-9a0d0c96f160_linkedin-photo-53771.linkedin-photo-53771"
+          }
+        },
+        "roles": [
+          {
+            "name": "Estudiante en practicas",
+            "startDate": "2014-09-01",
+            "finishDate": "2014-11-30",
+            "challenges": [
+              {
+                "description": "Prácticas en empresa desde septiembre de 2014 hasta noviembre de 2014 en Computer Space (www.ComputerSpace.es), especializada en brokerage, venta y mantenimiento de equipos informáticos. Realizando servicios a través de esta empresa para el Colegio de Huérfanos de la Armada, y el Centro de Logística de la misma."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Padis"
+        },
+        "roles": [
+          {
+            "name": "Encargado",
+            "startDate": "2008-02-01",
+            "finishDate": "2015-02-28",
+            "challenges": [
+              {
+                "description": "Desde el año 2008 hasta septiembre de 2014 trabajé en PADIS (www.padisl5r.com), un comercio de juegos de mesa y entretenimiento. Hasta el año 2010 trabajé en ferias comerciales como empleado del stand, desde ese año trabajé como encargado del turno del fin de semana en atención al cliente (cara al público), gestión de pedidos vía internet, gestión de la base de datos y organización de varios eventos."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Despacho Procurador Don Miguel Zamora Bausa"
+        },
+        "roles": [
+          {
+            "name": "Apoyo administrativo",
+            "startDate": "2006-04-01",
+            "finishDate": "2008-01-31",
+            "challenges": [
+              {
+                "description": "Servicios ocasionales (entre el año 2006 y el 2008) en despacho del procurador de los tribunales Don Miguel Zamora Bausá, digitalización de expedientes, presentación de escritos, y gestiones en los juzgados."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "details": {
+          "name": "Creador de portfolios usando el JSON de Manfred",
+          "description": "Estoy desarrollando un proyecto para poder crear a base del JSON exportable de Manfred un portfolio web completo y personalizable.",
+          "URL": "https://github.com/MiguelZamoraRey/portfolio_2024_v1"
+        },
+        "type": "openSource",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2024-02-01",
+            "competences": [
+              {
+                "name": "Astro",
+                "type": "technology"
+              },
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Pagina oficial de la liga de blood bowl de Guadalajara",
+          "description": "Este es un proyecto personal utilizando un framework nuevo, como es Astro, tratando de evitar en todo momento usar JS, y acercarme a lo mas vanilla posible.",
+          "URL": "https://guadabowl.com/"
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2024-01-01",
+            "competences": [
+              {
+                "name": "Astro",
+                "type": "technology"
+              },
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              }
+            ],
+            "finishDate": "2024-02-01"
+          }
+        ]
+      }
+    ]
+  },
+  "knowledge": {
+    "languages": [
+      {
+        "name": "EN",
+        "fullName": "Inglés",
+        "level": "Limited working proficiency"
+      },
+      {
+        "name": "ES",
+        "fullName": "Español",
+        "level": "Native or bilingual proficiency"
+      }
+    ],
+    "hardSkills": [
+      {
+        "skill": {
+          "name": "JavaScript",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "TypeScript",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "SOLID",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "NodeJS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "React",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Astro",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "HTML",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "CSS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Express",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Fastify",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "AWS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "AWS Lambda",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "AWS SQS Queue",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "AWS SNS Queue",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "RabbitMq",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Google Cloud",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Git",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Gitflow",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Github",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Google Cloud Firestore",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Google Firebase",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "MongoDB",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Mongoose",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "MySQL",
+          "type": "technology"
+        }
+      },
+
+      {
+        "skill": {
+          "name": "React Native",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Godot",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "jQuery",
+          "type": "technology"
+        }
+      }
+    ],
+    "studies": [
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Certificado Profesional Desarrollo de aplicaciones Web, Programación informática, aplicaciones específicas",
+        "startDate": "2015-01-01",
+        "institution": {
+          "name": "Forinemas"
+        },
+        "finishDate": "2015-01-01"
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Tecnico superior en desarrollo de aplicaciones multiplataforma, Programación informática",
+        "startDate": "2013-01-01",
+        "institution": {
+          "name": "Centro Cultural Salmantino"
+        },
+        "finishDate": "2014-01-01"
+      }
+    ],
+    "softSkills": [
+      {
+        "skill": {
+          "name": "Aprendizaje Continuo",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Pensamiento creativo",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Proactividad",
+          "type": "practice"
+        }
+      }
+    ]
+  },
+  "careerPreferences": {
+    "contact": {
+      "publicProfiles": [
+        {
+          "URL": "https://linkedin.com/in/miguelzamorarey",
+          "type": "linkedin"
+        },
+        {
+          "URL": "https://github.com/MiguelZamoraRey",
+          "type": "github"
+        }
+      ],
+      "contactMails": ["miguelzamorarey@gmail.com"]
     },
-    "manfredSpecificData": {
-      "mainStackTechs": [
+    "preferences": {
+      "preferredCompetences": [
         {
           "name": "AWS",
+          "type": "technology"
+        },
+        {
+          "name": "Astro",
+          "type": "technology"
+        },
+        {
+          "name": "CSS",
           "type": "technology"
         },
         {
@@ -828,7 +780,23 @@
           "type": "technology"
         },
         {
+          "name": "Godot",
+          "type": "technology"
+        },
+        {
           "name": "Google Cloud",
+          "type": "technology"
+        },
+        {
+          "name": "HTML",
+          "type": "technology"
+        },
+        {
+          "name": "MQTT",
+          "type": "technology"
+        },
+        {
+          "name": "MongoDB",
           "type": "technology"
         },
         {
@@ -836,18 +804,67 @@
           "type": "technology"
         },
         {
+          "name": "RabbitMQ",
+          "type": "technology"
+        },
+        {
           "name": "React",
           "type": "technology"
         }
       ],
-      "desiredJobDescription": "Me encantan los proyectos en los que hay **algo diferente** y con **stacks tecnológicos modernos**, si además es un proyecto en el que se empieza de cero y se puede aportar al diseño y **planteamiento de soluciones** mejor que mejor.\n\nActualmente uno de los mayores valores que tienen las empresas son la **comunicación de los equipos y el continuo feedback entre compañeros**, que siempre nos ayuda a poder serguir mejorando y estar atentos a las últimas novedades y tecnologías. \n\nHe compartido proyectos con profesionales muy cualificados de los que **he aprendido muchísimo**, pero también con gente que empezaba en el mundo del desarrollo y **es una experiencia muy satisfactoria ver como progresan y aportan soluciones frescas** a equipos que a veces tenemos los ojos vendados.\n\n",
-      "projects": [
+      "discardedCompetences": [
         {
-          "name": "Creador de portfolios usando el JSON de Manfred"
+          "name": "Hibernate",
+          "type": "technology"
         },
         {
-          "name": "Pagina oficial de la liga de blood bowl de Guadalajara"
+          "name": "JAVA",
+          "type": "technology"
+        },
+        {
+          "name": "Spring",
+          "type": "technology"
         }
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "Frontend Developer",
+        "Full-stack Developer"
       ]
-    }
+    },
+    "status": "searchingActively"
+  },
+  "manfredSpecificData": {
+    "mainStackTechs": [
+      {
+        "name": "AWS",
+        "type": "technology"
+      },
+      {
+        "name": "Express",
+        "type": "technology"
+      },
+      {
+        "name": "Google Cloud",
+        "type": "technology"
+      },
+      {
+        "name": "NodeJS",
+        "type": "technology"
+      },
+      {
+        "name": "React",
+        "type": "technology"
+      }
+    ],
+    "desiredJobDescription": "Me encantan los proyectos en los que hay **algo diferente** y con **stacks tecnológicos modernos**, si además es un proyecto en el que se empieza de cero y se puede aportar al diseño y **planteamiento de soluciones** mejor que mejor.\n\nActualmente uno de los mayores valores que tienen las empresas son la **comunicación de los equipos y el continuo feedback entre compañeros**, que siempre nos ayuda a poder serguir mejorando y estar atentos a las últimas novedades y tecnologías. \n\nHe compartido proyectos con profesionales muy cualificados de los que **he aprendido muchísimo**, pero también con gente que empezaba en el mundo del desarrollo y **es una experiencia muy satisfactoria ver como progresan y aportan soluciones frescas** a equipos que a veces tenemos los ojos vendados.\n\n",
+    "projects": [
+      {
+        "name": "Creador de portfolios usando el JSON de Manfred"
+      },
+      {
+        "name": "Pagina oficial de la liga de blood bowl de Guadalajara"
+      }
+    ]
   }
+}
