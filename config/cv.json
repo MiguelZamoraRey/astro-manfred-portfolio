@@ -101,7 +101,7 @@
             "finishDate": "2022-11-30",
             "challenges": [
               {
-                "description": "Entre enero y diciembre de 2022 colaboré con esta startup destinada a la creación de un marketplace basado en eventos culturales únicos. Participé como responsable tecnológico, gestion de equipo y responsable de backend."
+                "description": "Entre enero y diciembre de 2022 colaboré con esta startup destinada a la creación de un marketplace basado en eventos culturales únicos. Participé como responsable tecnológico, gestión de equipo y responsable de backend."
               }
             ],
             "competences": [
@@ -166,7 +166,7 @@
             "finishDate": "2023-02-28",
             "challenges": [
               {
-                "description": "Desde agosto colaboro con niikiis como desarrollador de backend y responsable de varios de los módulos de la aplicación, así como diseñando nuevas soluciones técnicas. \n\nEl reto más destacado en esta empresa fué diseñar e implementar un sistema basado en colas para gestionar todos los eventos de negocio de la empresa."
+                "description": "Desde agosto colaboré con niikiis como desarrollador de backend y responsable de varios de los módulos de la aplicación, así como diseñando nuevas soluciones técnicas. \n\nEl reto más destacado en esta empresa fue diseñar e implementar un sistema basado en colas para gestionar todos los eventos de negocio de la empresa."
               }
             ],
             "competences": [
@@ -218,7 +218,7 @@
             "finishDate": "2020-11-30",
             "challenges": [
               {
-                "description": "Entro a formar parte del equipo en evolutivos y nuevos proyectos para importantes clientes del sector editorial. Trabajando, sobre todo, en la creación de las interfaces internas que usarían los clientes, esto me supuso un reto a la hora de empezar a pensar en el UX y agilizar el proceso de aprendizaje que sufren muchos usuarios acostumbrados a interfaces de hace casi diez años."
+                "description": "Entré a formar parte del equipo en evolutivos y nuevos proyectos para importantes clientes del sector editorial. Trabajando, sobre todo, en la creación de las interfaces internas que usarían los clientes, esto me supuso un reto a la hora de empezar a pensar en el UX y agilizar el proceso de aprendizaje que sufren muchos usuarios acostumbrados a interfaces de hace casi diez años."
               }
             ],
             "competences": [
@@ -324,7 +324,7 @@
             "finishDate": "2018-07-31",
             "challenges": [
               {
-                "description": "Esta es una de las experiencias más enriquecedoras de mis inicios, empecé trabajando para un importante cliente del sector seguros apoyando en el desarrollo de su interfaz para clientes con backend en JAVA y Vaadin en el frontend, y al finalizar el proyecto satisfactoriamente me dieron la oportunidad de ayudar en un proyecto desde cero con un tempranísimo React en Barcelona para un cliente del sector Farma, creando toda la plataforma para la gestión diaria de su trabajo. Fué el momento de mi cambio de stack a nivel profesional."
+                "description": "Esta es una de las experiencias más enriquecedoras de mis inicios, empecé trabajando para un importante cliente del sector seguros apoyando en el desarrollo de su interfaz para clientes con backend en JAVA y Vaadin en el frontend, y al finalizar el proyecto satisfactoriamente me dieron la oportunidad de ayudar en un proyecto desde cero con un tempranísimo React en Barcelona para un cliente del sector Farma, creando toda la plataforma para la gestión diaria de su trabajo. Fue el momento de mi cambio de stack a nivel profesional."
               }
             ],
             "competences": [
@@ -400,7 +400,7 @@
             "finishDate": "2016-11-30",
             "challenges": [
               {
-                "description": "Entre a formar parte de la plantilla de Stratesys en un equipo de desarrollo fuera de SAP, para desarrollar todos aquellos aplicativos a los que no se pudiese llegar con el ERP o requiriesen más personalización. En esta etapa toque muchísimas tencnologías y descubrí NodeJS."
+                "description": "Entré a formar parte de la plantilla de Stratesys en un equipo de desarrollo fuera de SAP, para desarrollar todos aquellos aplicativos a los que no se pudiese llegar con el ERP o requiriesen más personalización. En esta etapa toque muchísimas tencnologías y descubrí NodeJS."
               }
             ]
           }
@@ -439,23 +439,6 @@
             "challenges": [
               {
                 "description": "Desde el año 2008 hasta septiembre de 2014 trabajé en PADIS (www.padisl5r.com), un comercio de juegos de mesa y entretenimiento. Hasta el año 2010 trabajé en ferias comerciales como empleado del stand, desde ese año trabajé como encargado del turno del fin de semana en atención al cliente (cara al público), gestión de pedidos vía internet, gestión de la base de datos y organización de varios eventos."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Despacho Procurador Don Miguel Zamora Bausa"
-        },
-        "roles": [
-          {
-            "name": "Apoyo administrativo",
-            "startDate": "2006-04-01",
-            "finishDate": "2008-01-31",
-            "challenges": [
-              {
-                "description": "Servicios ocasionales (entre el año 2006 y el 2008) en despacho del procurador de los tribunales Don Miguel Zamora Bausá, digitalización de expedientes, presentación de escritos, y gestiones en los juzgados."
               }
             ]
           }
