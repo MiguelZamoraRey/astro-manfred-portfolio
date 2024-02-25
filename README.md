@@ -1,13 +1,13 @@
 <div align="center">
 <h1>Creador de portfolios con el JSON descargable de Manfred</h1>
-<img src="portada.png"></img>
+<img src="portada2.png"></img>
 </div>
 
 # ⭐ Objetivo del proyecto:
 
 El objetivo es que cualquier persona pueda crear un potfolio web atractivo y mantenerlo actualizado gracias a que su contenido va a venir desde el json descargable de [Manfred](https://www.getmanfred.com/).
 
-Puedes ver un **ejemplo** en [mi propia web](https://mzrdeveloper.com/).
+Puedes ver un **ejemplo** en [mi propia web](https://mzrdeveloper.com/) o en el [ejemplo de Coloso](https://master--example-astro-manfred-cv.netlify.app/).
 
 # 🚀 Empezamos
 
