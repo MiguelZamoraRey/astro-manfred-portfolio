@@ -1,5 +1,6 @@
 <div align="center">
 <h1>Creador de portfolios con el JSON descargable de Manfred</h1>
+<img src="portada.png"></img>
 </div>
 
 # ⭐ Objetivo del proyecto:
