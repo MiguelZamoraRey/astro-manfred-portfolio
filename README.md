@@ -13,7 +13,7 @@ Puedes ver un **ejemplo** en [mi propia web](https://mzrdeveloper.com/).
 
 Este proyecto usa [Node.js](https://nodejs.org/en), y [Astro](https://astro.build/), si no estas familiarizado con ello no te procupes, no tienes porque tocar el código, pero si que tendrás que instalar [Node.js](https://nodejs.org/en).
 
-Si ya tienes conocimiento de estas tecnologías verás que toda la plantilla esta creada utilizando el menos núremo de dependencias posibles y seguro que puedes modificar o crear tus propias secciones de una manera muy sencilla.
+Si ya tienes conocimiento de estas tecnologías verás que toda la plantilla esta creada utilizando el menor número de dependencias posibles y seguro que puedes modificar o crear tus propias secciones de una manera muy sencilla.
 
 Según el contenido que quieras presentar en tu web hay varios archivos que debes configurar:
 
