@@ -6,33 +6,33 @@
   },
   "aboutMe": {
     "profile": {
-      "name": "Miguel",
-      "surnames": "Zamora Rey",
-      "title": "Senior full stack javascript developer",
-      "description": "Soy un programador y desarrollador full stack, comencé mi carrera profesional en 2015, y he trabajado para difrentes consultoras y como freelance. Me apasiona el desarrollo de software, y siempre estoy buscando nuevas formas de mejorar mis habilidades y aprender nuevas herramientas, asi como tratar de extender el uso de arquitecturas modernas en los diferentes proyectos en los que me involucro. De modo muy amateur participó en GameJams de videojuegos con Godot, y creo proyectos experimentando con diferentes herramientas prometedoras como Astro.",
+      "name": "Coloso",
+      "surnames": "Pyotr Rasputin",
+      "title": "X-Men, pintor y granjero",
+      "description": "Nació en una granja colectiva en la antigua Unión Soviética llamada «El Lago Cercano», colectivo Baikal Ust-Ordynski en Siberia. Vivió allí con su madre Alexandra, padre Nikolai y hermana pequeña, Illyana. Su hermano mayor, Mikhail, había sido astronauta ruso y había muerto, al parecer, en un accidente espacial. Las habilidades mutantes de Peter se despertaron durante su adolescencia, cuando un tractor fuera de control iba directo hacia su hermana. El profesor Charles Xavier supo de su existencia y entró en contacto con él. Xavier reclutaba un nuevo equipo de X-Men para rescatar al equipo original, cuya mayor parte había sido capturada por la isla viviente mutante, llamada Krakoa.",
       "avatar": {
-        "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771",
-        "alt": "24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771"
+        "link": "https://s3.amazonaws.com/comicgeeks/characters/avatars/18069.jpg?t=1664737987",
+        "alt": "https://s3.amazonaws.com/comicgeeks/characters/avatars/18069.jpg?t=1664737987"
       },
       "location": {
         "notes": "Autocompleted using Google Maps API (id: ChIJO_V_mGOsQw0RLkkHLC5wCoA)",
-        "country": "España",
-        "region": "Castilla-La Mancha",
-        "municipality": "Guadalajara"
+        "country": "EEUU",
+        "region": "Unknow",
+        "municipality": "Utopía"
       }
     },
     "relevantLinks": [
       {
         "type": "linkedin",
-        "URL": "https://linkedin.com/in/miguelzamorarey"
+        "URL": "https://es.wikipedia.org/wiki/Coloso_(personaje)"
       },
       {
         "type": "github",
-        "URL": "https://github.com/MiguelZamoraRey"
+        "URL": "https://github.com/MiguelZamoraRey/astro-manfred-portfolio"
       },
       {
         "type": "other",
-        "URL": "https://www.mzrdeveloper.com/"
+        "URL": "https://es.wikipedia.org/wiki/Coloso_(personaje)"
       }
     ]
   },
@@ -40,20 +40,20 @@
     "jobs": [
       {
         "organization": {
-          "name": "QUANTIC BRAINS",
+          "name": "X-MEN",
           "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771"
+            "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/X_symbol_from_X-Men_logo.svg/480px-X_symbol_from_X-Men_logo.svg.png",
+            "alt": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/X_symbol_from_X-Men_logo.svg/480px-X_symbol_from_X-Men_logo.svg.png"
           },
-          "URL": "https://www.quanticbrains.com/"
+          "URL": "https://es.wikipedia.org/wiki/X-Men"
         },
         "roles": [
           {
-            "name": "Programador full stack",
-            "startDate": "2023-02-01",
+            "name": "Miembro con honores",
+            "startDate": "1975-05-01",
             "challenges": [
               {
-                "description": "Desde Febrero trabajo como parte del equipo de software de quanticbrains, una empresa de IA, construyendo infraestructura, backend e interfaces para poder acercar los productos de la empresa a los clientes finales."
+                "description": "Desde su llegada con los X-Men, Coloso cautivó con su serenidad, altruismo y nobleza. En un viaje a la Tierra Salvaje, la jungla prehistórica escondida en la Antártida, Coloso conoció a una nativa llamada Nereel, con la que tuvo un romance y engendró un hijo, cuya existencia Coloso ignoró por muchos años."
               }
             ],
             "competences": [
@@ -84,379 +84,20 @@
             ]
           }
         ]
-      },
-      {
-        "organization": {
-          "name": "Culpass - Experiencias culturales únicas",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/49c99328-f385-4a95-82c9-55c2d4346ad7_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/49c99328-f385-4a95-82c9-55c2d4346ad7_linkedin-photo-53771.linkedin-photo-53771"
-          },
-          "URL": "https://culpass.com/"
-        },
-        "roles": [
-          {
-            "name": "Programador full stack y responsable de tecnología",
-            "startDate": "2022-01-01",
-            "finishDate": "2022-11-30",
-            "challenges": [
-              {
-                "description": "Entre enero y diciembre de 2022 colaboré con esta startup destinada a la creación de un marketplace basado en eventos culturales únicos. Participé como responsable tecnológico, gestión de equipo y responsable de backend."
-              }
-            ],
-            "competences": [
-              {
-                "name": "CSS",
-                "type": "technology"
-              },
-              {
-                "name": "HTML",
-                "type": "technology"
-              },
-              {
-                "name": "MongoDB",
-                "type": "technology"
-              },
-              {
-                "name": "NodeJS",
-                "type": "technology"
-              },
-              {
-                "name": "React",
-                "type": "technology"
-              },
-              {
-                "name": "React Native",
-                "type": "technology"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "mzrdeveloper"
-        },
-        "roles": [
-          {
-            "name": "Web & mobile freelance developer",
-            "startDate": "2020-12-01",
-            "finishDate": "2023-02-28",
-            "challenges": [
-              {
-                "description": "Desktop, mobile and web development.\nReact, React Native, Fastify, AWS, NodeJS."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "niikiis",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/c34aadc7-aeea-49dc-b3f5-b8c20945e385_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/c34aadc7-aeea-49dc-b3f5-b8c20945e385_linkedin-photo-53771.linkedin-photo-53771"
-          },
-          "URL": "https://www.niikiis.com/"
-        },
-        "roles": [
-          {
-            "name": "Desarrollador de back-end",
-            "startDate": "2020-08-01",
-            "finishDate": "2023-02-28",
-            "challenges": [
-              {
-                "description": "Desde agosto colaboré con niikiis como desarrollador de backend y responsable de varios de los módulos de la aplicación, así como diseñando nuevas soluciones técnicas. \n\nEl reto más destacado en esta empresa fue diseñar e implementar un sistema basado en colas para gestionar todos los eventos de negocio de la empresa."
-              }
-            ],
-            "competences": [
-              {
-                "name": "AWS",
-                "type": "technology"
-              },
-              {
-                "name": "AWS SNS",
-                "type": "technology"
-              },
-              {
-                "name": "Amazon SQS",
-                "type": "technology"
-              },
-              {
-                "name": "DynamoDB",
-                "type": "technology"
-              },
-              {
-                "name": "MongoDB",
-                "type": "technology"
-              },
-              {
-                "name": "NodeJS",
-                "type": "technology"
-              },
-              {
-                "name": "React",
-                "type": "technology"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "VAILOS",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/a3e93ba4-5b20-4ff8-a5e0-c622f89c73cf_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/a3e93ba4-5b20-4ff8-a5e0-c622f89c73cf_linkedin-photo-53771.linkedin-photo-53771"
-          },
-          "URL": "https://vailos.com/"
-        },
-        "roles": [
-          {
-            "name": "Desarrollador de software",
-            "startDate": "2019-10-01",
-            "finishDate": "2020-11-30",
-            "challenges": [
-              {
-                "description": "Entré a formar parte del equipo en evolutivos y nuevos proyectos para importantes clientes del sector editorial. Trabajando, sobre todo, en la creación de las interfaces internas que usarían los clientes, esto me supuso un reto a la hora de empezar a pensar en el UX y agilizar el proceso de aprendizaje que sufren muchos usuarios acostumbrados a interfaces de hace casi diez años."
-              }
-            ],
-            "competences": [
-              {
-                "name": "CSS",
-                "type": "technology"
-              },
-              {
-                "name": "HTML",
-                "type": "technology"
-              },
-              {
-                "name": "JAVA",
-                "type": "technology"
-              },
-              {
-                "name": "React",
-                "type": "technology"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "NEORIS",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/8d596927-ec64-4a63-afdb-4e3449e95fdb_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/8d596927-ec64-4a63-afdb-4e3449e95fdb_linkedin-photo-53771.linkedin-photo-53771"
-          },
-          "URL": "https://neoris.com/"
-        },
-        "roles": [
-          {
-            "name": "Programador informático",
-            "startDate": "2018-09-01",
-            "finishDate": "2019-10-31",
-            "challenges": [
-              {
-                "description": "Programador en cliente del sector banca, encargado de mantenimiento y evolutivos de varias piezas de software."
-              }
-            ],
-            "competences": [
-              {
-                "name": "CSS",
-                "type": "technology"
-              },
-              {
-                "name": "HTML",
-                "type": "technology"
-              },
-              {
-                "name": "JAVA",
-                "type": "technology"
-              },
-              {
-                "name": "JavaScript",
-                "type": "technology"
-              },
-              {
-                "name": "React",
-                "type": "technology"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "AgioGlobal Working Together",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/54496703-95f6-440b-bb3e-b6875056122e_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/54496703-95f6-440b-bb3e-b6875056122e_linkedin-photo-53771.linkedin-photo-53771"
-          },
-          "URL": "https://www.agioglobal.com/"
-        },
-        "roles": [
-          {
-            "name": "Programador",
-            "startDate": "2018-07-01",
-            "finishDate": "2018-09-30",
-            "challenges": [
-              {
-                "description": "Programando soluciones para el departamento de Marco Digitalización y manteniendo aplicaciones propias del banco."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Amaris",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/304fd302-2a0b-4d0c-8619-d011eede8766_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/304fd302-2a0b-4d0c-8619-d011eede8766_linkedin-photo-53771.linkedin-photo-53771"
-          },
-          "URL": "https://amaris.com/"
-        },
-        "roles": [
-          {
-            "name": "Consultor",
-            "startDate": "2017-05-01",
-            "finishDate": "2018-07-31",
-            "challenges": [
-              {
-                "description": "Esta es una de las experiencias más enriquecedoras de mis inicios, empecé trabajando para un importante cliente del sector seguros apoyando en el desarrollo de su interfaz para clientes con backend en JAVA y Vaadin en el frontend, y al finalizar el proyecto satisfactoriamente me dieron la oportunidad de ayudar en un proyecto desde cero con un tempranísimo React en Barcelona para un cliente del sector Farma, creando toda la plataforma para la gestión diaria de su trabajo. Fue el momento de mi cambio de stack a nivel profesional."
-              }
-            ],
-            "competences": [
-              {
-                "name": "CSS",
-                "type": "technology"
-              },
-              {
-                "name": "HTML",
-                "type": "technology"
-              },
-              {
-                "name": "Hibernate",
-                "type": "technology"
-              },
-              {
-                "name": "JAVA",
-                "type": "technology"
-              },
-              {
-                "name": "JavaScript",
-                "type": "technology"
-              },
-              {
-                "name": "NodeJS",
-                "type": "technology"
-              },
-              {
-                "name": "React",
-                "type": "technology"
-              },
-              {
-                "name": "Spring",
-                "type": "technology"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Tragsatec",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/78992f6c-3213-4ca5-b2d3-3c0e0932f043_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/78992f6c-3213-4ca5-b2d3-3c0e0932f043_linkedin-photo-53771.linkedin-photo-53771"
-          }
-        },
-        "roles": [
-          {
-            "name": "Programador",
-            "startDate": "2016-11-01",
-            "finishDate": "2017-05-31",
-            "challenges": [
-              {
-                "description": "Puesto como programador Java, manteniendo aplicativos y migrando las interfaces a frameworks más modernos."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "STRATESYS",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/695b0e10-a2f1-42fc-9395-1a4a77e7d236_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/695b0e10-a2f1-42fc-9395-1a4a77e7d236_linkedin-photo-53771.linkedin-photo-53771"
-          }
-        },
-        "roles": [
-          {
-            "name": "Programador",
-            "startDate": "2015-11-01",
-            "finishDate": "2016-11-30",
-            "challenges": [
-              {
-                "description": "Entré a formar parte de la plantilla de Stratesys en un equipo de desarrollo fuera de SAP, para desarrollar todos aquellos aplicativos a los que no se pudiese llegar con el ERP o requiriesen más personalización. En esta etapa toque muchísimas tencnologías y descubrí NodeJS."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Computer Space",
-          "image": {
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/f7896224-6a95-441f-a97f-9a0d0c96f160_linkedin-photo-53771.linkedin-photo-53771",
-            "alt": "24/02/08/f7896224-6a95-441f-a97f-9a0d0c96f160_linkedin-photo-53771.linkedin-photo-53771"
-          }
-        },
-        "roles": [
-          {
-            "name": "Estudiante en practicas",
-            "startDate": "2014-09-01",
-            "finishDate": "2014-11-30",
-            "challenges": [
-              {
-                "description": "Prácticas en empresa desde septiembre de 2014 hasta noviembre de 2014 en Computer Space (www.ComputerSpace.es), especializada en brokerage, venta y mantenimiento de equipos informáticos. Realizando servicios a través de esta empresa para el Colegio de Huérfanos de la Armada, y el Centro de Logística de la misma."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Padis"
-        },
-        "roles": [
-          {
-            "name": "Encargado",
-            "startDate": "2008-02-01",
-            "finishDate": "2015-02-28",
-            "challenges": [
-              {
-                "description": "Desde el año 2008 hasta septiembre de 2014 trabajé en PADIS (www.padisl5r.com), un comercio de juegos de mesa y entretenimiento. Hasta el año 2010 trabajé en ferias comerciales como empleado del stand, desde ese año trabajé como encargado del turno del fin de semana en atención al cliente (cara al público), gestión de pedidos vía internet, gestión de la base de datos y organización de varios eventos."
-              }
-            ]
-          }
-        ]
       }
     ],
     "projects": [
       {
         "details": {
-          "name": "Creador de portfolios usando el JSON de Manfred",
-          "description": "Estoy desarrollando un proyecto para poder crear a base del JSON exportable de Manfred un portfolio web completo y personalizable.",
-          "URL": "https://github.com/MiguelZamoraRey/portfolio_2024_v1"
+          "name": "Vencer a Juggernaut",
+          "description": "Después de que el supervillano Juggernaut se convirtió en la entidad conocida como Kuurth: Breaker of Stone, uno de los Heraldos del dios del miedo conocido como la Serpiente, Coloso hizo un trato con Cyttorak, el ser de otra dimensión que originalmente empoderó a Juggernaut, con el fin de obtener el poder para enfrentarse a Kuurth. Coloso se convirtió en el nuevo avatar del Juggernaut. Esta decisión hizo que Kitty rompiera con Coloso.",
+          "URL": "https://es.wikipedia.org/wiki/Coloso_(personaje)"
         },
-        "type": "openSource",
+        "type": "sideProject",
         "roles": [
           {
             "name": "Developer",
-            "startDate": "2024-02-01",
+            "startDate": "1980-02-01",
             "competences": [
               {
                 "name": "Astro",
@@ -475,35 +116,6 @@
                 "type": "technology"
               }
             ]
-          }
-        ]
-      },
-      {
-        "details": {
-          "name": "Pagina oficial de la liga de blood bowl de Guadalajara",
-          "description": "Este es un proyecto personal utilizando un framework nuevo, como es Astro, tratando de evitar en todo momento usar JS, y acercarme a lo mas vanilla posible.",
-          "URL": "https://guadabowl.com/"
-        },
-        "type": "sideProject",
-        "roles": [
-          {
-            "name": "Developer",
-            "startDate": "2024-01-01",
-            "competences": [
-              {
-                "name": "Astro",
-                "type": "technology"
-              },
-              {
-                "name": "CSS",
-                "type": "technology"
-              },
-              {
-                "name": "HTML",
-                "type": "technology"
-              }
-            ],
-            "finishDate": "2024-02-01"
           }
         ]
       }
@@ -514,11 +126,11 @@
       {
         "name": "EN",
         "fullName": "Inglés",
-        "level": "Limited working proficiency"
+        "level": "Native or bilingual proficiency"
       },
       {
-        "name": "ES",
-        "fullName": "Español",
+        "name": "RS",
+        "fullName": "Ruso",
         "level": "Native or bilingual proficiency"
       }
     ],
@@ -816,38 +428,5 @@
       ]
     },
     "status": "searchingActively"
-  },
-  "manfredSpecificData": {
-    "mainStackTechs": [
-      {
-        "name": "AWS",
-        "type": "technology"
-      },
-      {
-        "name": "Express",
-        "type": "technology"
-      },
-      {
-        "name": "Google Cloud",
-        "type": "technology"
-      },
-      {
-        "name": "NodeJS",
-        "type": "technology"
-      },
-      {
-        "name": "React",
-        "type": "technology"
-      }
-    ],
-    "desiredJobDescription": "Me encantan los proyectos en los que hay **algo diferente** y con **stacks tecnológicos modernos**, si además es un proyecto en el que se empieza de cero y se puede aportar al diseño y **planteamiento de soluciones** mejor que mejor.\n\nActualmente uno de los mayores valores que tienen las empresas son la **comunicación de los equipos y el continuo feedback entre compañeros**, que siempre nos ayuda a poder serguir mejorando y estar atentos a las últimas novedades y tecnologías. \n\nHe compartido proyectos con profesionales muy cualificados de los que **he aprendido muchísimo**, pero también con gente que empezaba en el mundo del desarrollo y **es una experiencia muy satisfactoria ver como progresan y aportan soluciones frescas** a equipos que a veces tenemos los ojos vendados.\n\n",
-    "projects": [
-      {
-        "name": "Creador de portfolios usando el JSON de Manfred"
-      },
-      {
-        "name": "Pagina oficial de la liga de blood bowl de Guadalajara"
-      }
-    ]
   }
 }

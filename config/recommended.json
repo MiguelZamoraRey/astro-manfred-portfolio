@@ -1,49 +1,13 @@
 {
   "recomendations": [
     {
-      "firstName": "Gorka",
-      "lastName": "Marqués",
-      "img": "https://media.licdn.com/dms/image/C4E03AQFdirQZX8sWIw/profile-displayphoto-shrink_100_100/0/1645929524948?e=1714003200&v=beta&t=5sjTpW2RTw2omzp47Atv7fYXnlFr4SaBjc3MSqmzOlY",
-      "company": "QUANTIC BRAINS",
-      "jobTitle": "AI Engineer",
-      "text": "He tenido el privilegio de trabajar con Miguel durante un año en Quantic Brains donde ha demostrado ser un desarrollador excepcional y un miembro muy valioso para el equipo.  Respecto a sus habilidades técnicas resaltaría la capacidad de crear un código solido y escalable,  permitiéndonos pivotar según las necesidades del producto.  Además de sus habilidades técnicas cabe destacar que es un gran compañero, siempre dispuesto a ayudar y a compartir conocimiento.",
-      "createdAt": "02/19/24, 12:06 PM"
-    },
-    {
-      "firstName": "Jesús",
-      "lastName": "Torrijo Gimeno",
-      "img": "https://media.licdn.com/dms/image/C4E03AQFlSi8f9nVRaA/profile-displayphoto-shrink_100_100/0/1621521976845?e=1714003200&v=beta&t=Vver4QYl61hDQAxvAlW8rTFdrk0zTRWqF_KTBoJlS40",
-      "company": "QUANTIC BRAINS",
-      "jobTitle": "Senior Lead Developer",
-      "text": "I have had the pleasure of working closely with Miguel and I can confidently say that he is a great professional. He have knowledge in multiples fields which makes him a versatile person. Also, he works very well as a team and writes code of the highest cuality. I highly recommend him and I am confident that he will excel in any endeavor he pursue.",
-      "createdAt": "02/18/24, 11:51 AM"
-    },
-    {
-      "firstName": "Javier C.",
-      "lastName": "Fernandez",
-      "img": "https://media.licdn.com/dms/image/D4D03AQEhqsQDvTp_Tg/profile-displayphoto-shrink_100_100/0/1706699484681?e=1714003200&v=beta&t=NrbLBAeYQOtwKhs6aYBQQJ-8p83CiPF_Al3VZ9evGUY",
-      "company": "QUANTIC BRAINS",
-      "jobTitle": "Unity Developer",
-      "text": "Miguel es una persona super resolutiva. No se ha dado la situación en la que haya ido a Miguel con un problema y el no haya tenido un plan de actuación. Es una persona muy responsable con su trabajo y es un gurú de buenas prácticas. Si algo no puede escalar o va suponer un problema de cara a futuro, Miguel es el primero que va a levantar la mano para decir 'Así no lo podemos hacer'. En cualquier reto que se le ponga por delante, Miguel aporta un valor tanto profesional como personal increíble. Es un gusto trabajar contigo.",
-      "createdAt": "02/16/24, 10:39 AM"
-    },
-    {
-      "firstName": "Ignacio",
-      "lastName": "Kleinman Ruiz",
-      "img": "https://media.licdn.com/dms/image/C4D03AQE-k5siwISVRg/profile-displayphoto-shrink_100_100/0/1645436617773?e=1714003200&v=beta&t=InlLiH7NJ3SO_WjNPUJHDCZKR5vK_gJUhXHpBzjqLHE",
-      "company": "Culpass",
-      "jobTitle": "Co-Founder – CEO",
-      "text": "Sin lugar a dudas Miguel es una de esas personas que te sorprende positivamente, no solo porque es un grandísimo profesional, sino que también una gran persona.  Miguel se incorporó a Culpass en 2021 como desarrollador y cabeza tecnológica del proyecto. Desde el primer momento le dimos carta blanca para organizar un proyecto a su antojo. Vi a o un niño dando rienda suelta a su creatividad, imaginación y conocimientos para crear una base sólida para nuestro primer MVP.  Miguel diseñó todo el backend de Culpass en un tiempo récord, creando una estructura clara y escalable. Utilizamos las últimas tecnologías: nodejs, mongodb, swagger…  Pero además, nos ha dado todo el apoyo como project manager con Trello y organización del equipo tecnológico… así como el frontend.   Todo proyecto que necesite una persona flexible, que piense out-of-the-box, con una visión clara y transparente, debería contar con Miguel. Además, Miguel cuenta con una gran capacidad de comunicación. ",
-      "createdAt": "12/02/22, 09:10 PM"
-    },
-    {
-      "firstName": "Pelayo",
-      "lastName": "Trives",
-      "img": "https://media.licdn.com/dms/image/D4D03AQEcAgOUEc9eLw/profile-displayphoto-shrink_100_100/0/1648308468325?e=1714003200&v=beta&t=yZV5Nr8RvqhbU2JJmhOtEgwyOLX2Qu52GzQo0KtdC2U",
-      "company": "Kapturall",
-      "jobTitle": "Front-End Developer & UX/UI Designer",
-      "text": "Trabajar con Miguel ha sido un auténtico placer. Se encargó de supervisar mi trabajo durante el tiempo en que coincidimos en Culpass. Tiene una gran capacidad resolutiva y puede completar cualquier tipo de reto con gran soltura. Es paciente, considerado y muy trabajador. Se toma su tiempo en explicar lo que hay que hacer y saca tiempo de donde no lo hay para completar las tareas. ¡Sin duda, trabajar con Miguel es la mejor elección que puede hacer cualquier equipo!",
-      "createdAt": "12/02/22, 05:07 PM"
+      "firstName": "Charles",
+      "lastName": "Xavier",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Professor_Charles_%27X%27_Xavier.png/220px-Professor_Charles_%27X%27_Xavier.png",
+      "company": "Escuela para jóvenes talentos",
+      "jobTitle": "Director",
+      "text": "Coloso es una parte integral de la patrulla y sin el muchos de nuestros esfuerzos hubiesen sido en vano al combatir a cualquiera de los peligros a los que estamos obligados a responder.",
+      "createdAt": "02/19/95, 12:00 PM"
     }
   ]
 }
