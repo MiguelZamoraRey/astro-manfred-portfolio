@@ -303,22 +303,12 @@
       {
         "studyType": "officialDegree",
         "degreeAchieved": true,
-        "name": "Certificado Profesional Desarrollo de aplicaciones Web, Programación informática, aplicaciones específicas",
-        "startDate": "2015-01-01",
+        "name": "Mutante graduado",
+        "startDate": "1975-01-01",
         "institution": {
-          "name": "Forinemas"
+          "name": "Escuale Xavier para jóvenes talentos"
         },
-        "finishDate": "2015-01-01"
-      },
-      {
-        "studyType": "officialDegree",
-        "degreeAchieved": true,
-        "name": "Tecnico superior en desarrollo de aplicaciones multiplataforma, Programación informática",
-        "startDate": "2013-01-01",
-        "institution": {
-          "name": "Centro Cultural Salmantino"
-        },
-        "finishDate": "2014-01-01"
+        "finishDate": "1976-01-01"
       }
     ],
     "softSkills": [
@@ -343,19 +333,6 @@
     ]
   },
   "careerPreferences": {
-    "contact": {
-      "publicProfiles": [
-        {
-          "URL": "https://linkedin.com/in/miguelzamorarey",
-          "type": "linkedin"
-        },
-        {
-          "URL": "https://github.com/MiguelZamoraRey",
-          "type": "github"
-        }
-      ],
-      "contactMails": ["miguelzamorarey@gmail.com"]
-    },
     "preferences": {
       "preferredCompetences": [
         {
