@@ -8,8 +8,8 @@
     "profile": {
       "name": "Miguel",
       "surnames": "Zamora Rey",
-      "title": "Full stack senior Javascript developer",
-      "description": "He trabajado desde 2015 como programador y desarrollador, tras unos años trabajando para diferentes consultorías y otros como freelance, he centrado mi carrera en tecnologías Javascript. Me apasionan las nuevas tecnologías y siempre estoy dispuesto a seguir aprendiendo.\n\nActualmente mi stack esta basado en javascript con tecnologías como Node.js, Express o Fastify y a nivel de Frontend con frameworks como React, Astro, o Vue así como con bases de datos relacionales (MySql, Oracle) y no relacionales (MongoDB, DynamoDb, Firebase).\n\nA nivel de desarrollo móvil he trabajado con frameworks como React Native (con y sin Expo).\n\nComo plataforma he trabajado con Docker, pero sobretodo en el mundo serverless de Google cloud platform o AWS.\n\nTambien trabajo con Godot engine realizando GameJams y proyectos orientados al mundo de los videojuegos.",
+      "title": "Senior full stack developer",
+      "description": "Soy un programador y desarrollador full stack, comencé mi carrera profesional en 2015, y he trabajado para difrentes consultoras y como freelance. Me apasiona el desarrollo de software, y siempre estoy buscando nuevas formas de mejorar mis habilidades y aprender nuevas herramientas, asi como tratar de extender el uso de arquitecturas modernas en los diferentes proyectos en los que me involucro. De modo muy amateur participó en GameJams de videojuegos con Godot, y creo proyectos experimentando con diferentes herramientas prometedoras como Astro.",
       "avatar": {
         "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771",
         "alt": "24/02/08/60e55c66-6222-4c4c-a2f8-a61373e1223e_linkedin-photo-53771.linkedin-photo-53771"
@@ -609,7 +609,7 @@
       },
       {
         "skill": {
-          "name": "RabbitMq",
+          "name": "RabbitMQ",
           "type": "technology"
         }
       },
