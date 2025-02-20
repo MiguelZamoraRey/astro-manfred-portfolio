@@ -40,6 +40,45 @@
     "jobs": [
       {
         "organization": {
+          "name": "Bemycar",
+          "image": {
+            "link": "https://media.licdn.com/dms/image/v2/D4E0BAQHGLrMRADrz4Q/company-logo_100_100/company-logo_100_100/0/1719255951080/bemycar_logo?e=1747872000&v=beta&t=4T_8fDbG39y3dOhgn3B6j-Zzlymfd24YEq73YqzwbcY",
+            "alt": "logo-bemycar-footer.png"
+          },
+          "URL": "https://bemycar.pro/"
+        },
+        "roles": [
+          {
+            "name": "Senior full-stack developer",
+            "startDate": "2024-06-01",
+            "challenges": [
+              {
+                "description": "Apoyando en la creación de una nueva base en la plataforma, ayudando a crear un producto más escalable e integrable en las plataformas de diferentes clientes."
+              }
+            ],
+            "competences": [
+              {
+                "name": "MongoDB",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              },
+              {
+                "name": "TypeScript",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
           "name": "QUANTIC BRAINS",
           "image": {
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/08/bbc165d4-db3a-4f77-b5c1-2ab5cefdca00_linkedin-photo-53771.linkedin-photo-53771",
@@ -51,6 +90,7 @@
           {
             "name": "Programador full stack",
             "startDate": "2023-02-01",
+            "finishDate": "2024-06-01",
             "challenges": [
               {
                 "description": "Desde Febrero trabajo como parte del equipo de software de quanticbrains, una empresa de IA, construyendo infraestructura, backend e interfaces para poder acercar los productos de la empresa a los clientes finales."
