@@ -488,6 +488,34 @@
     "projects": [
       {
         "details": {
+          "name": "Pagina para campaña y contenido extra del juego de mesa Mordheim",
+          "description": "Tras crear la comunidad del juego de mesa Bloodbowl en Guadalajara, empece este proyecto básamdome en el anterior y tratando de darle una estética de diario de fantasía.",
+          "URL": "https://eltopogruidor.netlify.app/"
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2025-02-01",
+            "competences": [
+              {
+                "name": "Astro",
+                "type": "technology"
+              },
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
           "name": "Creador de portfolios usando el JSON de Manfred",
           "description": "Estoy desarrollando un proyecto para poder crear a base del JSON exportable de Manfred un portfolio web completo y personalizable.",
           "URL": "https://github.com/MiguelZamoraRey/portfolio_2024_v1"
@@ -514,7 +542,8 @@
                 "name": "JavaScript",
                 "type": "technology"
               }
-            ]
+            ],
+            "finishDate": "2024-02-10"
           }
         ]
       },
