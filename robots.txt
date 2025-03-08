@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mzrdeveloper.com/sitemap-index.xml
