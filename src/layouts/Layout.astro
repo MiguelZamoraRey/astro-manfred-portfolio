@@ -41,6 +41,15 @@ const { bgColor, fontColor } = colors;
     <meta property="twitter:url" content="https://mzrdeveloper.com/" />
     <meta name="twitter:image" content={link} />
     <title>{title}</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MZR Developer",
+        "url": "https://mzrdeveloper.com",
+        "description": "Portfolio Miguel Zamora Rey - Full Stack developer."
+      }
+    </script>
   </head>
   <body>
     <slot />
