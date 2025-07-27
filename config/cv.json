@@ -736,7 +736,36 @@
           "type": "technology"
         }
       },
-
+      {
+        "skill": {
+          "name": "AI",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "MCP",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "OpenAi",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Claude",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Mistral",
+          "type": "technology"
+        }
+      },
       {
         "skill": {
           "name": "React Native",
