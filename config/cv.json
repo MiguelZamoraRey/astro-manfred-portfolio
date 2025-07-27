@@ -42,7 +42,7 @@
         "organization": {
           "name": "Bemycar",
           "image": {
-            "link": "https://media.licdn.com/dms/image/v2/D4E0BAQHGLrMRADrz4Q/company-logo_100_100/company-logo_100_100/0/1719255951080/bemycar_logo?e=1747872000&v=beta&t=4T_8fDbG39y3dOhgn3B6j-Zzlymfd24YEq73YqzwbcY",
+            "link": "https://media.licdn.com/dms/image/v2/D4E0BAQHGLrMRADrz4Q/company-logo_100_100/company-logo_100_100/0/1719255951080/bemycar_logo?e=1756339200&v=beta&t=2L4spPlBI933vY6fcXmpBVXOgUDl2u3w_2Du_-bwVUo",
             "alt": "logo-bemycar-footer.png"
           },
           "URL": "https://bemycar.pro/"
@@ -488,9 +488,9 @@
     "projects": [
       {
         "details": {
-          "name": "Pagina para campaña y contenido extra del juego de mesa Mordheim",
-          "description": "Tras crear la comunidad del juego de mesa Bloodbowl en Guadalajara, empece este proyecto básamdome en el anterior y tratando de darle una estética de diario de fantasía.",
-          "URL": "https://eltopogruidor.netlify.app/"
+          "name": "Mordhio - Agente IA RAG en una web",
+          "description": "Pagina con un agente de IA RAG que contiene el reglamento de Mordheim, sirve para plantear las dudas de los jugadores y resolverlas en una conversación natural.",
+          "URL": "https://mhordio.netlify.app/"
         },
         "type": "sideProject",
         "roles": [
@@ -499,15 +499,15 @@
             "startDate": "2025-02-01",
             "competences": [
               {
-                "name": "Astro",
+                "name": "React",
                 "type": "technology"
               },
               {
-                "name": "CSS",
+                "name": "IA",
                 "type": "technology"
               },
               {
-                "name": "HTML",
+                "name": "Mistral",
                 "type": "technology"
               }
             ]
