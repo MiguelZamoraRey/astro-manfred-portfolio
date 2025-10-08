@@ -26,7 +26,11 @@ const { jobs } = experience;
           <li>
             <figure>
               {organization.image && organization.image.link ? (
-                <img src={organization.image.link} alt={organization.name} />
+                <img
+                  src={organization.image.link}
+                  alt={organization.name}
+                  style="max-width: 6.5em;"
+                />
               ) : (
                 <img src="/images/noPhoto.webp" alt={organization.name} />
               )}
