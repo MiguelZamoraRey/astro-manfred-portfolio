@@ -1,55 +1,62 @@
 ---
 import Section from '@/components/Section.astro';
 
-import { experience } from '@config/cv.json';
-import Other from '@/icons/other.astro';
-
 import { colors } from '@config/styles.json';
 const { titlesColor, secondaryFontColor } = colors;
 
-import { recomendations } from '@config/recommended.json';
+import recommendedData from '@config/recommended.json';
+
+const recommendations = Array.isArray((recommendedData as any).recomendations)
+  ? (recommendedData as any).recomendations
+  : Array.isArray((recommendedData as any).recommendations)
+    ? (recommendedData as any).recommendations
+    : [];
 ---
 
-<Section title="Recomendaciones">
-  <ul>
-    {
-      recomendations.map(
-        ({ firstName, lastName, img, company, jobTitle, text, createdAt }) => {
-          return (
-            <li>
-              <figure>
-                {img && img ? (
-                  <img
-                    src={`/images/${img}.jpeg`}
-                    alt={firstName + ' ' + lastName}
-                  />
-                ) : (
-                  <img
-                    src="/images/noPhoto.webp"
-                    alt={firstName + ' ' + lastName}
-                  />
-                )}
-              </figure>
-              <article>
-                <header>
-                  <div>
-                    <h3>{firstName + ' ' + lastName}</h3>
+{
+  recommendations.length > 0 && (
+    <Section title="Recomendaciones">
+      <ul>
+        {
+          recommendations.map(
+            ({ firstName, lastName, img, company, jobTitle, text, createdAt }) => {
+              return (
+                <li>
+                  <figure>
+                    {img && img ? (
+                      <img
+                        src={`/images/${img}.jpeg`}
+                        alt={firstName + ' ' + lastName}
+                      />
+                    ) : (
+                      <img
+                        src="/images/noPhoto.webp"
+                        alt={firstName + ' ' + lastName}
+                      />
+                    )}
+                  </figure>
+                  <article>
+                    <header>
+                      <div>
+                        <h3>{firstName + ' ' + lastName}</h3>
 
-                    <h4>{company + ' - ' + jobTitle}</h4>
-                  </div>
-                  <time>{createdAt}</time>
-                </header>
-                <footer>
-                  <p>"{text}"</p>
-                </footer>
-              </article>
-            </li>
-          );
+                        <h4>{company + ' - ' + jobTitle}</h4>
+                      </div>
+                      <time>{createdAt}</time>
+                    </header>
+                    <footer>
+                      <p>"{text}"</p>
+                    </footer>
+                  </article>
+                </li>
+              );
+            }
+          )
         }
-      )
-    }
-  </ul>
-</Section>
+      </ul>
+    </Section>
+  )
+}
 
 <style define:vars={{ titlesColor, secondaryFontColor }}>
   .link-svg {

@@ -14,13 +14,11 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 import { colors } from '@config/styles.json';
 const { bgColor, secondaryBg } = colors;
 
-import { recomendations } from '@config/recommended.json';
-
-const showSkills = import.meta.env.PUBLIC_SHOW_SKILLS == 'Y';
-const showProjects = import.meta.env.PUBLIC_SHOW_PROJECTS == 'Y';
+const showSkills = import.meta.env.PUBLIC_SHOW_SKILLS !== 'N';
+const showProjects = import.meta.env.PUBLIC_SHOW_PROJECTS !== 'N';
 const showEducation = import.meta.env.PUBLIC_SHOW_EDUCATION == 'Y';
 const showLanguages = import.meta.env.PUBLIC_SHOW_LANGUAGES == 'Y';
-const showRecommended = import.meta.env.PUBLIC_SHOW_RECOMMENDED == 'Y';
+const showRecommended = import.meta.env.PUBLIC_SHOW_RECOMMENDED !== 'N';
 ---
 
 <Layout title="Portfolio Miguel Zamora Rey - Full Stack developer">
@@ -29,7 +27,7 @@ const showRecommended = import.meta.env.PUBLIC_SHOW_RECOMMENDED == 'Y';
     <div class="secondBg">
       <About />
       {showSkills && <Skills />}
-      {showRecommended && recomendations && <Recommended />}
+      {showRecommended && <Recommended />}
       <br />
     </div>
     {/*<section class="spikes"></section>*/}

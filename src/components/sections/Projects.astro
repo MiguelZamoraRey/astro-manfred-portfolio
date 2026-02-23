@@ -1,55 +1,87 @@
 ---
 import Section from '@/components/Section.astro';
 
-import { experience } from '@config/cv.json';
+import { experience, manfredSpecificData } from '@config/cv.json';
 import Other from '@/icons/other.astro';
 
 import { colors } from '@config/styles.json';
 const { titlesColor, secondaryFontColor } = colors;
 
-const { projects } = experience;
+const projectsFromExperience = Array.isArray(experience?.projects)
+  ? experience.projects
+  : [];
+
+const normalizedProjects =
+  projectsFromExperience.length > 0
+    ? projectsFromExperience.map((project) => {
+        const role: any = Array.isArray(project.roles)
+          ? project.roles[0]
+          : undefined;
+        const startDate = role?.startDate;
+        const finishDate = role?.finishDate;
+
+        const startYear = startDate
+          ? new Date(startDate).getFullYear().toString()
+          : '';
+        const endYear = finishDate
+          ? new Date(finishDate).getFullYear().toString()
+          : startYear
+            ? 'Actualmente'
+            : '';
+
+        return {
+          name: project?.details?.name ?? '',
+          description: project?.details?.description ?? '',
+          url: project?.details?.URL ?? '',
+          years: startYear ? `${startYear} - ${endYear}` : '',
+        };
+      })
+    : Array.isArray(manfredSpecificData?.projects)
+      ? manfredSpecificData.projects.map((project) => ({
+          name: project?.name ?? '',
+          description: '',
+          url: '',
+          years: '',
+        }))
+      : [];
+
+const projects = normalizedProjects.filter((project) => project.name);
 ---
 
-<Section title="Proyectos personales">
-  <ul>
-    {
-      projects.map(({ details, type, roles }) => {
-        const startYear = new Date(roles[0].startDate).getFullYear();
-
-        const endYear = roles[0]['finishDate']
-          ? new Date(roles[0]['finishDate']).getFullYear()
-          : 'Actualmente';
-
-        const years = `${startYear} - ${endYear}`;
-
-        return (
-          <li>
-            <article>
-              <header>
-                <div>
-                  <a
-                    href={details.URL ? details.URL : '#'}
-                    title={details.name}
-                    target="_blank"
-                  >
-                    <div class="link-svg">
-                      <Other color={titlesColor} />
+{
+  projects.length > 0 && (
+    <Section title="Proyectos personales">
+      <ul>
+        {
+          projects.map(({ name, description, url, years }) => {
+            return (
+              <li>
+                <article>
+                  <header>
+                    <div>
+                      <a href={url || '#'} title={name} target="_blank">
+                        <div class="link-svg">
+                          <Other color={titlesColor} />
+                        </div>
+                        <h3>{name}</h3>
+                      </a>
                     </div>
-                    <h3>{details.name}</h3>
-                  </a>
-                </div>
-                <time>{years}</time>
-              </header>
-              <footer>
-                <p>{details.description}</p>
-              </footer>
-            </article>
-          </li>
-        );
-      })
-    }
-  </ul>
-</Section>
+                    {years && <time>{years}</time>}
+                  </header>
+                  {description && (
+                    <footer>
+                      <p>{description}</p>
+                    </footer>
+                  )}
+                </article>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </Section>
+  )
+}
 
 <style define:vars={{ titlesColor, secondaryFontColor }}>
   .link-svg {

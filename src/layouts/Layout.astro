@@ -7,7 +7,7 @@ const { title } = Astro.props;
 
 import { aboutMe, settings } from '@config/cv.json';
 
-const { profile, relevantLinks } = aboutMe;
+const { profile } = aboutMe;
 const { link } = profile.avatar;
 
 import { colors } from '@config/styles.json';
@@ -41,7 +41,7 @@ const { bgColor, fontColor } = colors;
     <meta property="twitter:url" content="https://mzrdeveloper.com/" />
     <meta name="twitter:image" content={link} />
     <title>{title}</title>
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",

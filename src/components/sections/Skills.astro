@@ -8,8 +8,20 @@ import Node from '@/icons/node.astro';
 import MySQL from '@/icons/sql.astro';
 import Git from '@/icons/git.astro';
 import GitHub from '@/icons/github.astro';
-import { knowledge } from '@config/cv.json';
-const { hardSkills } = knowledge;
+import { knowledge, manfredSpecificData } from '@config/cv.json';
+
+const hardSkillsFromKnowledge = Array.isArray(knowledge?.hardSkills)
+  ? knowledge.hardSkills
+  : [];
+
+const hardSkillsFromManfred = Array.isArray(manfredSpecificData?.mainStackTechs)
+  ? manfredSpecificData.mainStackTechs.map((skill: any) => ({ skill }))
+  : [];
+
+const hardSkills =
+  hardSkillsFromKnowledge.length > 0
+    ? hardSkillsFromKnowledge
+    : hardSkillsFromManfred;
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -23,24 +35,28 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 
 import { colors } from '@config/styles.json';
-const { titlesColor, secondaryFontColor } = colors;
+const { titlesColor } = colors;
 ---
 
 <Section title="Habilidades">
-  <ul>
-    {
-      hardSkills.map(({ skill }) => {
-        const iconName = skill.name === 'Next.js' ? 'Next' : skill.name;
-        const Icon = SKILLS_ICONS[iconName];
+  {
+    hardSkills.length > 0 && (
+      <ul>
+        {
+          hardSkills.map(({ skill }) => {
+            const iconName = skill.name === 'Next.js' ? 'Next' : skill.name;
+            const Icon = SKILLS_ICONS[iconName];
 
-        return (
-          <li>
-            {Icon && <Icon color={titlesColor} />} <span>{skill.name}</span>
-          </li>
-        );
-      })
-    }
-  </ul>
+            return (
+              <li>
+                {Icon && <Icon color={titlesColor} />} <span>{skill.name}</span>
+              </li>
+            );
+          })
+        }
+      </ul>
+    )
+  }
 </Section>
 
 <style>

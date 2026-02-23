@@ -13,6 +13,8 @@ Puedes ver un **ejemplo** en [mi propia web](https://mzrdeveloper.com/).
 
 Este proyecto usa [Node.js](https://nodejs.org/en), y [Astro](https://astro.build/), si no estas familiarizado con ello no te procupes, no tienes porque tocar el código, pero si que tendrás que instalar [Node.js](https://nodejs.org/en).
 
+> Requisitos recomendados: **Node.js 20+** y **Astro 5**.
+
 Si ya tienes conocimiento de estas tecnologías verás que toda la plantilla esta creada utilizando el menor número de dependencias posibles y seguro que puedes modificar o crear tus propias secciones de una manera muy sencilla.
 
 Según el contenido que quieras presentar en tu web hay varios archivos que debes configurar:
@@ -35,6 +37,7 @@ PUBLIC_SHOW_LANGUAGES=N # Y or N
 PUBLIC_SHOW_RECOMMENDED=Y # Y or N
 PUBLIC_EMAIL="" # OPCIONAL Tu email
 PUBLIC_PHONE="" # OPCIONAL Tu teléfono
+PUBLIC_MANFRED="" # OPCIONAL URL de tu perfil en Manfred
 ```
 
 ## 👀 Datos y secciones adicionales
@@ -94,6 +97,10 @@ Puedes probar en local con el siguiente comando y arbir [**http://localhost:4321
 Puedes construir una build con el comando, los resultados aparecerán en la carpeta **dist**:
 
 > npm run build
+
+Puedes validar tipos y archivos Astro con:
+
+> npm run check
 
 # ☄️ Roadmap
 

@@ -11,21 +11,54 @@ import Phone from '@/icons/Phone.astro';
 import Download from '@/icons/Download.astro';
 
 import cvPdf from '@config/cv.pdf';
-import { aboutMe } from '@config/cv.json';
+import { aboutMe, careerPreferences } from '@config/cv.json';
 //import { contact } from '@config/external.json';
 
 const { profile, relevantLinks } = aboutMe;
-const { name, surnames, title, description, avatar, location } = profile;
-const { link, alt } = avatar;
+const { name, surnames, title, avatar, location } = profile;
+const { link } = avatar;
 const { country, region, municipality } = location;
 
 import { colors } from '@config/styles.json';
 import Other from '@/icons/other.astro';
 const { heroTitle, heroSecondary, heroFrom, heroTo } = colors;
 
-const email = import.meta.env.PUBLIC_EMAIL;
-const phone = import.meta.env.PUBLIC_PHONE;
-const manfred = import.meta.env.PUBLIC_MANFRED;
+const contact: any = careerPreferences?.contact ?? {};
+
+const fallbackEmail = Array.isArray(contact.contactMails)
+  ? contact.contactMails[0]
+  : undefined;
+
+const fallbackPhone = Array.isArray(contact.contactPhones)
+  ? contact.contactPhones[0]
+  : Array.isArray(contact.contactPhoneNumbers)
+    ? contact.contactPhoneNumbers[0]
+    : Array.isArray(contact.phones)
+      ? contact.phones[0]
+      : undefined;
+
+const allProfiles = [
+  ...(Array.isArray(relevantLinks) ? relevantLinks : []),
+  ...(Array.isArray(contact.publicProfiles) ? contact.publicProfiles : []),
+];
+
+const manfredProfile = allProfiles.find((profile: any) => {
+  const type = String(profile?.type ?? '').toLowerCase();
+  const url = String(profile?.URL ?? '').toLowerCase();
+
+  return type.includes('manfred') || url.includes('manfred');
+});
+
+const email = import.meta.env.PUBLIC_EMAIL || fallbackEmail;
+const phone = import.meta.env.PUBLIC_PHONE || fallbackPhone;
+const manfred = import.meta.env.PUBLIC_MANFRED || manfredProfile?.URL;
+
+const uniqueRelevantLinks = allProfiles.filter((profile: any, index: number) => {
+  if (!profile?.URL) return false;
+  if (manfred && profile.URL === manfred) return false;
+
+  return allProfiles.findIndex((candidate: any) => candidate?.URL === profile.URL) === index;
+});
 
 const SOCIAL_ICONS: Record<string, any> = {
   github,
@@ -94,8 +127,9 @@ const SOCIAL_ICONS: Record<string, any> = {
             )
           }
           {
-            relevantLinks.map(({ type, URL }) => {
-              const Icon = SOCIAL_ICONS[type];
+            uniqueRelevantLinks.map(({ type, URL }) => {
+              const normalizedType = String(type ?? '').toLowerCase();
+              const Icon = SOCIAL_ICONS[normalizedType] ?? Other;
 
               return (
                 <a
