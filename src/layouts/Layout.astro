@@ -5,10 +5,85 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { aboutMe, settings } from '@config/cv.json';
+import { aboutMe, careerPreferences, experience, settings } from '@config/cv.json';
 
-const { profile } = aboutMe;
+const { profile, relevantLinks } = aboutMe;
 const { link } = profile.avatar;
+const siteUrl = 'https://mzrdeveloper.com';
+const canonicalUrl = Astro.url
+  ? new URL(Astro.url.pathname, siteUrl).toString()
+  : `${siteUrl}/`;
+
+const fullName = `${profile.name} ${profile.surnames}`;
+
+const publicProfiles = Array.isArray((careerPreferences as any)?.contact?.publicProfiles)
+  ? (careerPreferences as any).contact.publicProfiles
+  : [];
+
+const sameAs = [...(Array.isArray(relevantLinks) ? relevantLinks : []), ...publicProfiles]
+  .map((profile: any) => profile?.URL)
+  .filter((url: string | undefined) => Boolean(url));
+
+const projects = Array.isArray((experience as any)?.projects)
+  ? (experience as any).projects
+  : [];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      name: 'MZR Developer',
+      url: siteUrl,
+      description: profile.title,
+      inLanguage: 'es',
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: fullName,
+      jobTitle: profile.title,
+      description: profile.description,
+      image: link,
+      url: `${siteUrl}/`,
+      sameAs,
+      homeLocation: {
+        '@type': 'Place',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: profile.location.municipality,
+          addressRegion: profile.location.region,
+          addressCountry: profile.location.country,
+        },
+      },
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': `${siteUrl}/#profile`,
+      url: `${siteUrl}/`,
+      inLanguage: 'es',
+      mainEntity: {
+        '@id': `${siteUrl}/#person`,
+      },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${siteUrl}/#projects`,
+      name: 'Proyectos personales',
+      itemListElement: projects.map((project: any, index: number) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'CreativeWork',
+          name: project?.details?.name,
+          description: project?.details?.description,
+          url: project?.details?.URL,
+        },
+      })),
+    },
+  ],
+};
 
 import { colors } from '@config/styles.json';
 const { bgColor, fontColor } = colors;
@@ -20,15 +95,17 @@ const { bgColor, fontColor } = colors;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={profile.title} />
+    <meta name="robots" content="index,follow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content={bgColor} />
     <meta name="geo.region" content={settings.language} />
     <meta name="language" content="es" />
-    <meta name="author" content="Miguel Zamora Rey" />
+    <meta name="author" content={fullName} />
     <!--Facebook meta tags -->
     <meta property="og:title" content={title} />
-    <meta property="og:url" content="https://mzrdeveloper.com/" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={profile.title} />
     <meta property="og:image" content={link} />
@@ -37,19 +114,15 @@ const { bgColor, fontColor } = colors;
 
     <!--Tritter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="https://mzrdeveloper.com" />
-    <meta property="twitter:url" content="https://mzrdeveloper.com/" />
+    <meta property="twitter:domain" content={siteUrl} />
+    <meta property="twitter:url" content={canonicalUrl} />
     <meta name="twitter:image" content={link} />
     <title>{title}</title>
-    <script is:inline type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "MZR Developer",
-        "url": "https://mzrdeveloper.com",
-        "description": "Portfolio Miguel Zamora Rey - Full Stack developer."
-      }
-    </script>
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    ></script>
   </head>
   <body>
     <slot />

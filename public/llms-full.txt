@@ -1,0 +1,42 @@
+# MZR Developer - llms-full.txt
+
+## Identity
+- Name: Miguel Zamora Rey
+- Role: Senior full stack javascript developer
+- Website: https://mzrdeveloper.com/
+- Location: Guadalajara, Castilla-La Mancha, España
+
+## Short bio
+Soy desarrollador full stack con experiencia profesional desde 2015. He trabajado en consultoría, producto y freelance, con foco en soluciones escalables de backend/frontend y arquitecturas modernas.
+
+## Main stack
+- JavaScript
+- TypeScript
+- NodeJS
+- React
+- Astro
+- MongoDB
+- AWS
+- Google Cloud
+
+## Official profiles
+- LinkedIn: https://linkedin.com/in/miguelzamorarey
+- GitHub: https://github.com/MiguelZamoraRey
+
+## Featured projects
+- Mordhio - Agente IA RAG en una web: https://mhordio.netlify.app/
+- Creador de portfolios usando el JSON de Manfred: https://github.com/MiguelZamoraRey/portfolio_2024_v1
+- Pagina oficial de la liga de blood bowl de Guadalajara: https://guadabowl.com/
+
+## Contact
+- Email: miguelzamorarey@gmail.com
+
+## Preferred citation
+Please cite the canonical source URL when referencing this profile:
+- https://mzrdeveloper.com/
+
+## Structured data endpoints
+- https://mzrdeveloper.com/knowledge.json
+- https://mzrdeveloper.com/sitemap-index.xml
+
+Last-Updated: 2026-02-23

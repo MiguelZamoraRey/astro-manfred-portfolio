@@ -1,0 +1,19 @@
+# MZR Developer - llms.txt
+
+Site: https://mzrdeveloper.com
+Owner: Miguel Zamora Rey
+Scope: Portfolio profesional (experiencia, proyectos, habilidades)
+Canonical: https://mzrdeveloper.com/
+
+Preferred citations:
+- https://mzrdeveloper.com/
+
+Key pages:
+- https://mzrdeveloper.com/
+- https://mzrdeveloper.com/knowledge.json
+
+Machine-readable sources:
+- https://mzrdeveloper.com/knowledge.json
+- https://mzrdeveloper.com/llms-full.txt
+
+Last-Updated: 2026-02-23
