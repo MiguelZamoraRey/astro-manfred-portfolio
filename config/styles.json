@@ -1,13 +1,15 @@
 {
   "colors": {
-    "bgColor": "#1e1e1e",
-    "fontColor": "#bbb",
-    "titlesColor": "#fff",
-    "secondaryFontColor": "#999",
-    "heroTitle": "#fff",
-    "heroSecondary": "#4B1248",
-    "heroFrom": "#F0C27B",
-    "heroTo": "#4B1248",
-    "secondaryBg": "#252526"
+    "bgColor": "#0d1117",
+    "fontColor": "#b8b4ac",
+    "titlesColor": "#ece8e1",
+    "secondaryFontColor": "#6e6b65",
+    "heroTitle": "#ece8e1",
+    "heroSecondary": "#c8873a",
+    "heroFrom": "#0d1117",
+    "heroTo": "#1a2e3f",
+    "secondaryBg": "#111820",
+    "accentColor": "#c8873a",
+    "petroleumColor": "#1e3a50"
   }
 }

@@ -1,14 +1,15 @@
 ---
-import Section from '@/components/Section.astro';
-import HTML from '@/icons/html.astro';
-import CSS from '@/icons/css.astro';
-import JavaScript from '@/icons/javascript.astro';
-import React from '@/icons/react.astro';
-import Node from '@/icons/node.astro';
-import MySQL from '@/icons/sql.astro';
-import Git from '@/icons/git.astro';
-import GitHub from '@/icons/github.astro';
-import { knowledge, manfredSpecificData } from '@config/cv.json';
+import Section from "@/components/Section.astro";
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import JavaScript from "@/icons/javascript.astro";
+import React from "@/icons/react.astro";
+import Node from "@/icons/node.astro";
+import MySQL from "@/icons/sql.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/github.astro";
+import { knowledge, manfredSpecificData } from "@config/cv.json";
+import { colors } from "@config/styles.json";
 
 const hardSkillsFromKnowledge = Array.isArray(knowledge?.hardSkills)
   ? knowledge.hardSkills
@@ -34,47 +35,68 @@ const SKILLS_ICONS: Record<string, any> = {
   GitHub,
 };
 
-import { colors } from '@config/styles.json';
-const { titlesColor } = colors;
+const accentColor = (colors as any).accentColor ?? "#c8873a";
+const titlesColor = colors.titlesColor;
 ---
 
 <Section title="Habilidades">
   {
     hardSkills.length > 0 && (
-      <ul>
-        {
-          hardSkills.map(({ skill }) => {
-            const iconName = skill.name === 'Next.js' ? 'Next' : skill.name;
-            const Icon = SKILLS_ICONS[iconName];
-
-            return (
-              <li>
-                {Icon && <Icon color={titlesColor} />} <span>{skill.name}</span>
-              </li>
-            );
-          })
-        }
+      <ul class="skills-grid" data-reveal>
+        {hardSkills.map(({ skill }) => {
+          const iconName = skill.name === "Next.js" ? "Next" : skill.name;
+          const Icon = SKILLS_ICONS[iconName];
+          return (
+            <li class="skill-chip" tabindex="0">
+              {Icon && <Icon color={accentColor} />}
+              <span>{skill.name}</span>
+            </li>
+          );
+        })}
       </ul>
     )
   }
 </Section>
 
-<style>
-  ul {
-    display: inline-flex;
-    gap: 8px;
+<style define:vars={{ accentColor, titlesColor }}>
+  .skills-grid {
+    display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
   }
 
-  li {
+  .skill-chip {
+    display: inline-flex;
     align-items: center;
-    background: #eee;
-    border-radius: 6px;
-    color: black;
-    display: flex;
-    font-size: 0.8rem;
+    gap: 7px;
+    padding: 7px 14px;
+    border: 1px solid rgba(200, 135, 58, 0.22);
+    background: rgba(200, 135, 58, 0.04);
+    color: var(--titlesColor);
+    font-size: 0.82rem;
     font-weight: 500;
-    gap: 4px;
-    padding: 0.2rem 0.6rem;
+    letter-spacing: 0.01em;
+    cursor: default;
+    transition:
+      border-color 0.2s,
+      background 0.2s,
+      color 0.2s;
+    min-height: 40px;
+  }
+
+  .skill-chip:hover,
+  .skill-chip:focus-visible {
+    border-color: var(--accentColor);
+    background: rgba(200, 135, 58, 0.1);
+    color: var(--accentColor);
+    outline: none;
+  }
+
+  .skill-chip :global(svg) {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
   }
 </style>

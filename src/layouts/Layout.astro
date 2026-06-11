@@ -5,22 +5,32 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { aboutMe, careerPreferences, experience, settings } from '@config/cv.json';
+import {
+  aboutMe,
+  careerPreferences,
+  experience,
+  settings,
+} from "@config/cv.json";
 
 const { profile, relevantLinks } = aboutMe;
 const { link } = profile.avatar;
-const siteUrl = 'https://mzrdeveloper.com';
+const siteUrl = "https://mzrdeveloper.com";
 const canonicalUrl = Astro.url
   ? new URL(Astro.url.pathname, siteUrl).toString()
   : `${siteUrl}/`;
 
 const fullName = `${profile.name} ${profile.surnames}`;
 
-const publicProfiles = Array.isArray((careerPreferences as any)?.contact?.publicProfiles)
+const publicProfiles = Array.isArray(
+  (careerPreferences as any)?.contact?.publicProfiles,
+)
   ? (careerPreferences as any).contact.publicProfiles
   : [];
 
-const sameAs = [...(Array.isArray(relevantLinks) ? relevantLinks : []), ...publicProfiles]
+const sameAs = [
+  ...(Array.isArray(relevantLinks) ? relevantLinks : []),
+  ...publicProfiles,
+]
   .map((profile: any) => profile?.URL)
   .filter((url: string | undefined) => Boolean(url));
 
@@ -29,19 +39,19 @@ const projects = Array.isArray((experience as any)?.projects)
   : [];
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'WebSite',
-      '@id': `${siteUrl}/#website`,
-      name: 'MZR Developer',
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "MZR Developer",
       url: siteUrl,
       description: profile.title,
-      inLanguage: 'es',
+      inLanguage: "es",
     },
     {
-      '@type': 'Person',
-      '@id': `${siteUrl}/#person`,
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
       name: fullName,
       jobTitle: profile.title,
       description: profile.description,
@@ -49,9 +59,9 @@ const structuredData = {
       url: `${siteUrl}/`,
       sameAs,
       homeLocation: {
-        '@type': 'Place',
+        "@type": "Place",
         address: {
-          '@type': 'PostalAddress',
+          "@type": "PostalAddress",
           addressLocality: profile.location.municipality,
           addressRegion: profile.location.region,
           addressCountry: profile.location.country,
@@ -59,23 +69,23 @@ const structuredData = {
       },
     },
     {
-      '@type': 'ProfilePage',
-      '@id': `${siteUrl}/#profile`,
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profile`,
       url: `${siteUrl}/`,
-      inLanguage: 'es',
+      inLanguage: "es",
       mainEntity: {
-        '@id': `${siteUrl}/#person`,
+        "@id": `${siteUrl}/#person`,
       },
     },
     {
-      '@type': 'ItemList',
-      '@id': `${siteUrl}/#projects`,
-      name: 'Proyectos personales',
+      "@type": "ItemList",
+      "@id": `${siteUrl}/#projects`,
+      name: "Proyectos personales",
       itemListElement: projects.map((project: any, index: number) => ({
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: index + 1,
         item: {
-          '@type': 'CreativeWork',
+          "@type": "CreativeWork",
           name: project?.details?.name,
           description: project?.details?.description,
           url: project?.details?.URL,
@@ -85,8 +95,9 @@ const structuredData = {
   ],
 };
 
-import { colors } from '@config/styles.json';
+import { colors } from "@config/styles.json";
 const { bgColor, fontColor } = colors;
+const accentColor = (colors as any).accentColor ?? "#c8873a";
 ---
 
 <!doctype html>
@@ -122,10 +133,101 @@ const { bgColor, fontColor } = colors;
       is:inline
       type="application/ld+json"
       set:html={JSON.stringify(structuredData)}
-    ></script>
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global define:vars={{ bgColor, fontColor, accentColor }}>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--bgColor);
+        color: var(--fontColor);
+        font-family:
+          "Source Sans 3",
+          -apple-system,
+          system-ui,
+          sans-serif;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Sora", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        [data-reveal] {
+          opacity: 0;
+          transform: translateY(18px);
+          transition:
+            opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+            transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)
+              var(--reveal-delay, 0ms);
+        }
+        [data-reveal].is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        [data-reveal] {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <slot />
+    <script>
+      (function () {
+        const prefersReduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (prefersReduced) {
+          document.querySelectorAll("[data-reveal]").forEach(function (el) {
+            el.classList.add("is-visible");
+          });
+          return;
+        }
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              const el = entry.target;
+              const parent = el.parentElement;
+              const siblings = parent
+                ? Array.from(parent.querySelectorAll("[data-reveal]"))
+                : [el];
+              const idx = siblings.indexOf(el);
+              (el as HTMLElement).style.setProperty(
+                "--reveal-delay",
+                Math.min(idx * 70, 280) + "ms",
+              );
+              el.classList.add("is-visible");
+              observer.unobserve(el);
+            });
+          },
+          { threshold: 0.08, rootMargin: "0px 0px -24px 0px" },
+        );
+        document.querySelectorAll("[data-reveal]").forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
   </body>
 </html>
 <style is:global define:vars={{ bgColor, fontColor }}>
@@ -134,7 +236,7 @@ const { bgColor, fontColor } = colors;
       Menlo,
       Monaco,
       Lucida Console,
-      'Courier New',
+      "Courier New",
       Courier,
       monospace;
     background: var(--bgColor);
@@ -173,13 +275,13 @@ const { bgColor, fontColor } = colors;
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
-      'Segoe UI',
+      "Segoe UI",
       Roboto,
       Oxygen,
       Ubuntu,
       Cantarell,
-      'Open Sans',
-      'Helvetica Neue',
+      "Open Sans",
+      "Helvetica Neue",
       sans-serif;
   }
 

@@ -1,144 +1,187 @@
 ---
-import Section from '@/components/Section.astro';
+import Section from "@/components/Section.astro";
+import { experience } from "@config/cv.json";
+import { colors } from "@config/styles.json";
 
-import { experience } from '@config/cv.json';
-import Other from '@/icons/other.astro';
-
-import { colors } from '@config/styles.json';
 const { titlesColor, secondaryFontColor } = colors;
+const accentColor = (colors as any).accentColor ?? "#c8873a";
 
 const { jobs } = experience;
 ---
 
 <Section title="Experiencia">
-  <ul>
+  <ol class="timeline">
     {
       jobs.map(({ organization, roles }) => {
         const startYear = new Date(roles[0].startDate).getFullYear();
-
-        const endYear = roles[0]['finishDate']
-          ? new Date(roles[0]['finishDate']).getFullYear()
-          : 'Actualmente';
-
-        const years = `${startYear} - ${endYear}`;
+        const role0 = roles[0] as any;
+        const endYear = role0.finishDate
+          ? new Date(role0.finishDate).getFullYear()
+          : "Actualmente";
+        const years = `${startYear} – ${endYear}`;
+        const initial = organization.name.charAt(0).toUpperCase();
+        const hasUrl = !!organization.URL;
 
         return (
-          <li>
-            <figure>
-              {organization.image && organization.image.link ? (
-                <img
-                  src={organization.image.link}
-                  alt={organization.name}
-                  style="max-width: 6.5em;"
-                />
-              ) : (
-                <img src="/images/noPhoto.webp" alt={organization.name} />
-              )}
-            </figure>
-            <article>
-              <header>
-                <div>
-                  <a
-                    href={organization.URL ? organization.URL : '#'}
-                    title={organization.name}
-                    target="_blank"
-                  >
-                    <div class="link-svg">
-                      <Other color={titlesColor} />
-                    </div>
-                    <h3>{organization.name}</h3>
-                  </a>
-
-                  <h4>{roles[0].name}</h4>
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-node">
+              <span class="initial-badge">{initial}</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  {hasUrl ? (
+                    <a
+                      href={organization.URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="company-name"
+                    >
+                      {organization.name}
+                    </a>
+                  ) : (
+                    <span class="company-name">{organization.name}</span>
+                  )}
+                  <span class="role-name">{roles[0].name}</span>
                 </div>
-                <time>{years}</time>
-              </header>
-              <footer>
-                <p>{roles[0].challenges[0].description}</p>
-              </footer>
-            </article>
+                <time class="years">{years}</time>
+              </div>
+              <p class="description">{roles[0].challenges?.[0]?.description}</p>
+            </div>
           </li>
         );
       })
     }
-  </ul>
+  </ol>
 </Section>
 
-<style define:vars={{ titlesColor, secondaryFontColor }}>
-  .link-svg {
-    margin-right: 0.5em;
+<style define:vars={{ titlesColor, secondaryFontColor, accentColor }}>
+  .timeline {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  ul {
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 10px;
+    bottom: 2rem;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accentColor), transparent);
+    opacity: 0.3;
+  }
+
+  .timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 0 1.5rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .timeline-node {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    align-items: center;
+    padding-top: 2px;
   }
 
-  li {
+  .initial-badge {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--accentColor);
+    color: var(--accentColor);
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
     display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: transparent;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
   }
 
-  article {
-    width: 100%;
+  .timeline-content {
+    padding-bottom: 0.5rem;
   }
 
-  figure img {
-    margin-right: 1.5rem;
-    border-radius: 50%;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: var(--titlesColor);
-  }
-
-  article a {
-    color: var(--titlesColor);
-    display: flex;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: var(--titlesColor);
-    font-weight: 400;
-  }
-
-  header {
+  .timeline-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
   }
 
-  time {
+  .timeline-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .company-name {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--titlesColor);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a.company-name:hover {
+    color: var(--accentColor);
+  }
+
+  .role-name {
+    font-size: 0.875rem;
     color: var(--secondaryFontColor);
-    font-size: 0.85rem;
-    min-width: 102px;
+    font-weight: 400;
   }
 
-  @media (width <= 700px) {
-    time {
-      text-align: right;
+  .years {
+    font-size: 0.72rem;
+    font-family: "Sora", sans-serif;
+    color: var(--accentColor);
+    white-space: nowrap;
+    opacity: 0.8;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 3px;
+  }
+
+  .description {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: var(--secondaryFontColor);
+    max-width: 68ch;
+  }
+
+  @media (max-width: 600px) {
+    .timeline::before {
+      left: 15px;
     }
 
-    li {
+    .timeline-item {
+      grid-template-columns: 36px 1fr;
+      gap: 0 1rem;
+    }
+
+    .initial-badge {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
+
+    .timeline-header {
       flex-direction: column;
-    }
-    figure {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-
-    figure img {
-      margin-top: 0.5rem;
-      width: 25%;
-      border-radius: 50%;
+      gap: 0.25rem;
     }
   }
 </style>

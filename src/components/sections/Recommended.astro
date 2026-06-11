@@ -1,10 +1,11 @@
 ---
-import Section from '@/components/Section.astro';
+import Section from "@/components/Section.astro";
+import { colors } from "@config/styles.json";
 
-import { colors } from '@config/styles.json';
 const { titlesColor, secondaryFontColor } = colors;
+const accentColor = (colors as any).accentColor ?? "#c8873a";
 
-import recommendedData from '@config/recommended.json';
+import recommendedData from "@config/recommended.json";
 
 const recommendations = Array.isArray((recommendedData as any).recomendations)
   ? (recommendedData as any).recomendations
@@ -16,128 +17,169 @@ const recommendations = Array.isArray((recommendedData as any).recomendations)
 {
   recommendations.length > 0 && (
     <Section title="Recomendaciones">
-      <ul>
-        {
-          recommendations.map(
-            ({ firstName, lastName, img, company, jobTitle, text, createdAt }) => {
-              return (
-                <li>
-                  <figure>
-                    {img && img ? (
-                      <img
-                        src={`/images/${img}.jpeg`}
-                        alt={firstName + ' ' + lastName}
-                      />
-                    ) : (
-                      <img
-                        src="/images/noPhoto.webp"
-                        alt={firstName + ' ' + lastName}
-                      />
-                    )}
-                  </figure>
-                  <article>
-                    <header>
-                      <div>
-                        <h3>{firstName + ' ' + lastName}</h3>
-
-                        <h4>{company + ' - ' + jobTitle}</h4>
-                      </div>
-                      <time>{createdAt}</time>
-                    </header>
-                    <footer>
-                      <p>"{text}"</p>
-                    </footer>
-                  </article>
-                </li>
-              );
-            }
-          )
-        }
+      <ul class="masonry">
+        {recommendations.map(
+          ({
+            firstName,
+            lastName,
+            img,
+            company,
+            jobTitle,
+            text,
+            createdAt,
+          }: any) => (
+            <li class="rec-card" data-reveal>
+              <blockquote>
+                <p class="rec-text">{text}</p>
+              </blockquote>
+              <footer class="rec-footer">
+                <div class="rec-avatar">
+                  {img ? (
+                    <img
+                      src={`/images/${img}.jpeg`}
+                      alt={`${firstName} ${lastName}`}
+                    />
+                  ) : (
+                    <div class="rec-avatar-fallback" aria-hidden="true">
+                      {firstName.charAt(0)}
+                      {lastName.charAt(0)}
+                    </div>
+                  )}
+                </div>
+                <div class="rec-author">
+                  <span class="rec-name">
+                    {firstName} {lastName}
+                  </span>
+                  <span class="rec-company">
+                    {company} · {jobTitle}
+                  </span>
+                </div>
+                <time class="rec-date">{createdAt}</time>
+              </footer>
+            </li>
+          ),
+        )}
       </ul>
     </Section>
   )
 }
 
-<style define:vars={{ titlesColor, secondaryFontColor }}>
-  .link-svg {
-    margin-right: 0.5em;
+<style define:vars={{ titlesColor, secondaryFontColor, accentColor }}>
+  .masonry {
+    columns: 2;
+    column-gap: 1.5rem;
+    list-style: none;
+    padding: 0;
   }
-  ul {
+
+  .rec-card {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(200, 135, 58, 0.15);
+    padding: 1.5rem 1.5rem 1.25rem;
+    position: relative;
+  }
+
+  .rec-card::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.6rem;
+    right: 1.1rem;
+    font-family: "Sora", sans-serif;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--accentColor);
+    opacity: 0.18;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .rec-text {
+    font-size: 0.875rem;
+    line-height: 1.78;
+    color: var(--titlesColor);
+    opacity: 0.88;
+    margin-bottom: 1.25rem;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  .rec-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(200, 135, 58, 0.1);
+  }
+
+  .rec-avatar {
+    flex-shrink: 0;
+  }
+
+  .rec-avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .rec-avatar-fallback {
+    width: 40px;
+    height: 40px;
+    background: rgba(200, 135, 58, 0.08);
+    border: 1px solid rgba(200, 135, 58, 0.28);
+    color: var(--accentColor);
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: "Sora", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  .rec-author {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 0.1rem;
+    flex: 1;
+    min-width: 0;
   }
 
-  li {
-    display: flex;
-    width: 100%;
-  }
-
-  article {
-    width: 100%;
-  }
-
-  figure img {
-    margin-right: 1.5rem;
-    border-radius: 50%;
-  }
-
-  article h3 {
-    font-weight: 500;
+  .rec-name {
+    font-weight: 600;
+    font-size: 0.82rem;
     color: var(--titlesColor);
+    font-family: "Sora", sans-serif;
+    display: block;
   }
 
-  article a {
-    color: var(--titlesColor);
-    display: flex;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
+  .rec-company {
+    font-size: 0.75rem;
     color: var(--secondaryFontColor);
-    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
+  .rec-date {
+    font-size: 0.68rem;
+    color: var(--accentColor);
+    opacity: 0.65;
+    white-space: nowrap;
+    font-family: "Sora", sans-serif;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+    display: block;
   }
 
-  time {
-    color: var(--secondaryFontColor);
-    font-size: 0.85rem;
-    min-width: 102px;
-  }
-
-  footer p {
-    font-style: italic;
-    color: var(--titlesColor);
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-
-    li {
-      flex-direction: column;
-    }
-    figure {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-
-    figure img {
-      margin-top: 0.5rem;
-      width: 25%;
-      border-radius: 50%;
+  @media (max-width: 700px) {
+    .masonry {
+      columns: 1;
     }
   }
 </style>

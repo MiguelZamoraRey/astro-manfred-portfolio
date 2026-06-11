@@ -1,11 +1,10 @@
 ---
-import Section from '@/components/Section.astro';
+import Section from "@/components/Section.astro";
+import { experience, manfredSpecificData } from "@config/cv.json";
+import { colors } from "@config/styles.json";
 
-import { experience, manfredSpecificData } from '@config/cv.json';
-import Other from '@/icons/other.astro';
-
-import { colors } from '@config/styles.json';
 const { titlesColor, secondaryFontColor } = colors;
+const accentColor = (colors as any).accentColor ?? "#c8873a";
 
 const projectsFromExperience = Array.isArray(experience?.projects)
   ? experience.projects
@@ -19,29 +18,27 @@ const normalizedProjects =
           : undefined;
         const startDate = role?.startDate;
         const finishDate = role?.finishDate;
-
         const startYear = startDate
           ? new Date(startDate).getFullYear().toString()
-          : '';
+          : "";
         const endYear = finishDate
           ? new Date(finishDate).getFullYear().toString()
           : startYear
-            ? 'Actualmente'
-            : '';
-
+            ? "Actualmente"
+            : "";
         return {
-          name: project?.details?.name ?? '',
-          description: project?.details?.description ?? '',
-          url: project?.details?.URL ?? '',
-          years: startYear ? `${startYear} - ${endYear}` : '',
+          name: project?.details?.name ?? "",
+          description: project?.details?.description ?? "",
+          url: project?.details?.URL ?? "",
+          years: startYear ? `${startYear} – ${endYear}` : "",
         };
       })
     : Array.isArray(manfredSpecificData?.projects)
       ? manfredSpecificData.projects.map((project) => ({
-          name: project?.name ?? '',
-          description: '',
-          url: '',
-          years: '',
+          name: project?.name ?? "",
+          description: "",
+          url: "",
+          years: "",
         }))
       : [];
 
@@ -51,106 +48,155 @@ const projects = normalizedProjects.filter((project) => project.name);
 {
   projects.length > 0 && (
     <Section title="Proyectos personales">
-      <ul>
-        {
-          projects.map(({ name, description, url, years }) => {
-            return (
-              <li>
-                <article>
-                  <header>
-                    <div>
-                      <a href={url || '#'} title={name} target="_blank">
-                        <div class="link-svg">
-                          <Other color={titlesColor} />
-                        </div>
-                        <h3>{name}</h3>
-                      </a>
-                    </div>
-                    {years && <time>{years}</time>}
-                  </header>
-                  {description && (
-                    <footer>
-                      <p>{description}</p>
-                    </footer>
-                  )}
-                </article>
-              </li>
-            );
-          })
-        }
+      <ul class="projects-grid">
+        {projects.map(({ name, description, url, years }) => (
+          <li class="project-card" data-reveal>
+            <div class="project-inner">
+              <div class="project-top">
+                <div class="project-accent-line" />
+                {years && <time class="project-years">{years}</time>}
+              </div>
+              <div class="project-body">
+                {url ? (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-name"
+                  >
+                    {name}
+                    <svg
+                      class="ext-icon"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 12L12 4M12 4H6M12 4v6"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                  </a>
+                ) : (
+                  <span class="project-name no-link">{name}</span>
+                )}
+                {description && <p class="project-desc">{description}</p>}
+              </div>
+            </div>
+          </li>
+        ))}
       </ul>
     </Section>
   )
 }
 
-<style define:vars={{ titlesColor, secondaryFontColor }}>
-  .link-svg {
-    margin-right: 0.5em;
+<style define:vars={{ titlesColor, secondaryFontColor, accentColor }}>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    list-style: none;
+    padding: 0;
+    border: 1px solid rgba(200, 135, 58, 0.12);
   }
-  ul {
+
+  .project-card {
+    position: relative;
+    border: 1px solid transparent;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
+    cursor: pointer;
+  }
+
+  /* stretched-link: toda la card es clicable via el ::after del anchor */
+  a.project-name::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .project-card:only-child {
+    grid-column: 1 / -1;
+  }
+
+  .project-card:hover {
+    border-color: rgba(200, 135, 58, 0.35);
+    background: rgba(200, 135, 58, 0.04);
+  }
+
+  .project-inner {
+    padding: 1.5rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding-bottom: 2.5em;
+    gap: 0.75rem;
   }
 
-  li {
+  .project-top {
     display: flex;
-    width: 100%;
-  }
-
-  article {
-    width: 100%;
-  }
-
-  figure img {
-    margin-right: 1.5rem;
-    border-radius: 0.2em;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: var(--titlesColor);
-  }
-
-  article a {
-    color: var(--titlesColor);
-    display: flex;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: var(--titlesColor);
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
+    align-items: center;
     justify-content: space-between;
+  }
+
+  .project-accent-line {
+    width: 24px;
+    height: 2px;
+    background: var(--accentColor);
+    opacity: 0.5;
+  }
+
+  .project-years {
+    font-size: 0.68rem;
+    font-family: "Sora", sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accentColor);
+    opacity: 0.7;
+  }
+
+  .project-name {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--titlesColor);
+    display: flex;
     align-items: flex-start;
-    margin-bottom: 4px;
+    gap: 5px;
+    text-decoration: none;
+    line-height: 1.3;
+    transition: color 0.2s;
   }
 
-  time {
+  a.project-name:hover {
+    color: var(--accentColor);
+  }
+
+  .project-name.no-link {
+    cursor: default;
+  }
+
+  .ext-icon {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    opacity: 0.6;
+  }
+
+  .project-desc {
+    font-size: 0.82rem;
+    line-height: 1.7;
     color: var(--secondaryFontColor);
-    font-size: 0.85rem;
-    min-width: 102px;
+    margin: 0;
   }
 
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-
-    li {
-      flex-direction: column;
-    }
-
-    figure img {
-      margin-top: 0.5rem;
+  @media (max-width: 600px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

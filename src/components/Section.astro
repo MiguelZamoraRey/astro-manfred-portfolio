@@ -1,8 +1,12 @@
 ---
+interface Props {
+  title?: string;
+}
 const { title } = Astro.props;
 
-import { colors } from '@config/styles.json';
+import { colors } from "@config/styles.json";
 const { titlesColor } = colors;
+const accentColor = (colors as any).accentColor ?? "#c8873a";
 ---
 
 <section>
@@ -10,26 +14,30 @@ const { titlesColor } = colors;
   <slot />
 </section>
 
-<style define:vars={{ titlesColor }}>
+<style define:vars={{ titlesColor, accentColor }}>
   section {
     max-width: 900px;
-    margin: 0 auto 48px;
-    padding: 0px 1em;
-    padding-bottom: 0.5em;
+    margin: 0 auto 64px;
+    padding: 0 1.25em;
   }
 
   h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    padding-top: 1em;
+    text-align: left;
+    margin-bottom: 1.5em;
+    padding-top: 1.25em;
     font-weight: 700;
-    line-height: 2rem;
-    font-size: 2rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     color: var(--titlesColor);
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--accentColor);
+    opacity: 0.9;
   }
 
-  @media (width <= 900px) {
+  @media (max-width: 900px) {
     section {
+      padding: 0 1em;
     }
   }
 </style>
