@@ -487,27 +487,59 @@
     ],
     "projects": [
       {
-        "details": {
-          "name": "Mordhio - Agente IA RAG en una web",
-          "description": "Pagina con un agente de IA RAG que contiene el reglamento de Mordheim, sirve para plantear las dudas de los jugadores y resolverlas en una conversación natural.",
-          "URL": "https://mhordio.netlify.app/"
+         "details": {
+          "name": "Sistema Eventos para El reto de Claudia",
+          "description": "Actualmente estoy colaborando con Ignacio, Elena y CLaudia creando un sistema para poder organizar eventos y recaudar fondos con webs custom, sistema de usuarios, pasarela de pagos por evento y organizador... Un proyecto precioso y por una buena causa.",
+          "URL": "https://elc-frontend.pages.dev/carrera-solidaria"
         },
         "type": "sideProject",
         "roles": [
           {
             "name": "Developer",
-            "startDate": "2025-02-01",
+            "startDate": "2026-05-11",
             "competences": [
               {
-                "name": "React",
+                "name": "Astro",
                 "type": "technology"
               },
+              {
+                "name": "Typescript",
+                "type": "technology"
+              },
+              {
+                "name": "Node.js",
+                "type": "technology"
+              },
+              {
+                "name": "Express",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "SDD Template",
+          "description": "Esta plantilla establece un flujo de trabajo basado en Spec-Driven Development (SDD) integrado con GitHub Copilot en VS Code. La idea central es simple: escribe la especificación primero, luego el código.",
+          "URL": "https://github.com/MiguelZamoraRey/sdd-template"
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2026-04-11",
+            "competences": [
               {
                 "name": "IA",
                 "type": "technology"
               },
               {
-                "name": "Mistral",
+                "name": "Spec Driven Development",
+                "type": "technology"
+              },
+              {
+                "name": "Copilot",
                 "type": "technology"
               }
             ]
@@ -549,30 +581,58 @@
       },
       {
         "details": {
-          "name": "Pagina oficial de la liga de blood bowl de Guadalajara",
-          "description": "Este es un proyecto personal utilizando un framework nuevo, como es Astro, tratando de evitar en todo momento usar JS, y acercarme a lo mas vanilla posible.",
-          "URL": "https://guadabowl.com/"
+          "name": "Topigotchi",
+          "description": "Topigochi es una mascota virtual estilo Tamagotchi para Arduino NANO o mayor potencia, con pantalla OLED, botones de interacción y feedback sonoro mediante buzzer. Permite alimentar, jugar, limpiar y cuidar la salud y felicidad de tu mascota. Incluye animaciones, iconos de menú, estados avanzados y guardado persistente.",
+          "URL": "https://github.com/MiguelZamoraRey/topigochi"
         },
         "type": "sideProject",
         "roles": [
           {
             "name": "Developer",
-            "startDate": "2024-01-01",
+            "startDate": "2026-01-01",
             "competences": [
               {
-                "name": "Astro",
+                "name": "Arduino",
                 "type": "technology"
               },
               {
-                "name": "CSS",
+                "name": "Electrónica",
                 "type": "technology"
               },
               {
-                "name": "HTML",
+                "name": "C++",
                 "type": "technology"
               }
             ],
-            "finishDate": "2024-02-01"
+            "finishDate": "2026-01-31"
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Videojuegos - GameJams",
+          "description": "También hago videojuegos como hobby 🎮, sobre todo en gamejams, evenos tipo hackaton pero orientado a crear videojuegos con una serie de limitaciones y en un tiempo determinado, la mayoría 72 horas.",
+          "URL": "https://ainhur.itch.io/"
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2024-03-06",
+            "competences": [
+              {
+                "name": "Godot",
+                "type": "technology"
+              },
+              {
+                "name": "Pico 8",
+                "type": "technology"
+              },
+              {
+                "name": "Game Maker",
+                "type": "technology"
+              }
+            ]
           }
         ]
       }
