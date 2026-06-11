@@ -357,10 +357,10 @@ const SOCIAL_ICONS: Record<string, any> = {
     const nodes: Node[] = [];
 
     function resize() {
-      W = canvas.offsetWidth;
-      H = canvas.offsetHeight;
-      canvas.width = W;
-      canvas.height = H;
+      W = canvas!.offsetWidth;
+      H = canvas!.offsetHeight;
+      canvas!.width = W;
+      canvas!.height = H;
     }
 
     function init() {
