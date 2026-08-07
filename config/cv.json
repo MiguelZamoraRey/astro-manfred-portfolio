@@ -487,6 +487,38 @@
     ],
     "projects": [
       {
+        "details": {
+          "name": "hajolo",
+          "description": "hajolo es una aplicación web gamificada para construir hábitos, con identidad de ajolote. Cada hábito es una 'misión' con una meta mínima de supervivencia y una meta ideal: cumplir la mínima ya suma para tu racha y volver tras un fallo siempre cuenta, sin culpa. Incluye registro de progreso con un toque, rachas, XP y niveles, insignias, calendario mensual y recordatorios de tu motivo al volver de una ausencia. Frontend en React con React Router y Vite, y backend REST en Node.js desplegado en Railway.",
+          "URL": "https://hajolo.com"
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2026-08-01",
+            "competences": [
+              {
+                "name": "React",
+                "type": "technology"
+              },
+              {
+                "name": "TypeScript",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "CSS",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
          "details": {
           "name": "Sistema Eventos para El reto de Claudia",
           "description": "Actualmente estoy colaborando con Ignacio, Elena y CLaudia creando un sistema para poder organizar eventos y recaudar fondos con webs custom, sistema de usuarios, pasarela de pagos por evento y organizador... Un proyecto precioso y por una buena causa.",
